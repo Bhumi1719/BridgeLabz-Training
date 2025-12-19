@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class perimeterRec {
+public class PerimeterRec {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int length = sc.nextInt(); // Length of the rectangle

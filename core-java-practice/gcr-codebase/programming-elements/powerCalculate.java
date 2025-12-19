@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class powerCalculate {
+public class PowerCalculate {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int base = sc.nextInt(); // Base number

@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
-public class harryAge {
+public class HarryAge {
     public static void main(String[] args) {
-        int birthYear = 2000;
+        int BIRTH_YEAR = 2000;
+        int age = (2024 - BIRTH_YEAR);
         
-        System.out.println("Harry's age in 2024 is: " + (2024 - birthYear));
+        System.out.println("Harry's age in 2024 is: " + age);
     }
 }

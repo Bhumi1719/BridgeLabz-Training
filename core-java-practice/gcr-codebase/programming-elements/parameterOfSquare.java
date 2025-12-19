@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class parameterOfSquare {
+public class ParameterOfSquare {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);    
 

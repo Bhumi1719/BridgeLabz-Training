@@ -1,9 +1,9 @@
-public class volumeOfEarth {
+public class VolumeOfEarth {
     public static void main(String[] args) {
-        double radius = 6378; // Radius in km
+        double RADIUS = 6378; // Radius in km
 
         // Calculate the volume of the Earth in cubic km
-        double volInKm = (4.0 / 3.0) * Math.PI * Math.pow(radius, 3);
+        double volInKm = (4.0 / 3.0) * Math.PI * Math.pow(RADIUS, 3);
 
         // Calculate the volume in cubic miles
         double volInMiles = volInKm * 0.239;

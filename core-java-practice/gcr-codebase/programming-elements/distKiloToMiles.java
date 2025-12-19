@@ -1,11 +1,11 @@
-public class distKiloToMiles {
+public class DistKiloToMiles {
     public static void main(String[] args) {
-        double kilometers = 10.8;
+        double KILOMETERS = 10.8;
 
         // Converting kilometers to miles
-        double miles = kilometers * 0.6;
+        double miles = KILOMETERS * 0.6;
 
         // Print the result
-        System.out.println("The distance" + kilometers + " km in miles is " + miles);
+        System.out.println("The distance" + KILOMETERS + " km in miles is " + miles);
     }
 }
