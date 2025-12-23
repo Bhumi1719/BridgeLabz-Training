@@ -12,7 +12,7 @@ public class BmiMulti {
         double[][] person = new double[persons][3];
 
         // Declaring array to store weight status
-        String[] weight = new String[persons];
+        String[] status = new String[persons];
 
         // Taking input for weight and height
         for (int i=0; i<persons; i++) {
@@ -35,11 +35,11 @@ public class BmiMulti {
             person[i][2] = person[i][0] / (person[i][1] * person[i][1]);
 
             // Determining weight status of each person
-            if (bmi[i] < 18.5) {
+            if (person[i][2] < 18.5) {
                 status[i] = "Underweight";
-            } else if (bmi[i] >= 18.5 && bmi[i] < 25) {
+            } else if (person[i][2] >= 18.5 && bmi[i] < 25) {
                 status[i] = "Normal";
-            } else if (bmi[i] >= 25 && bmi[i] < 40){
+            } else if (person[i][2] >= 25 && bmi[i] < 40){
                 status[i] = "Overweight";
             } else {
                 status[i] = "Obese"
@@ -53,7 +53,7 @@ public class BmiMulti {
                 "Weight: " + person[i][0] +
                 ", Height: " + person[i][1] +
                 ", BMI: " + String.format("%.2f", person[i][2]) +
-                ", Status: " + weight[i]
+                ", Status: " + status[i]
             );
         }
     }
