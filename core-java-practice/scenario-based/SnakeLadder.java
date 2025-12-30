@@ -8,7 +8,10 @@ public class SnakeLadder {
 
         int POSITION = 0; // Position of the player in the starting
 
-        System.out.println("The position of player at the starting of the game is: " + POSITION);
+        Random random = new Random(); // Creating an object of random
+        int roll = random.nextInt(6) + 1; // Generating numbers between 1 to 6 randomly
+
+        System.out.println("The number appeared on dice after rolling is: " + roll);
         
     }
 }
