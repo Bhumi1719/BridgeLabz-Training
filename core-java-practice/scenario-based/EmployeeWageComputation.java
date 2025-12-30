@@ -17,7 +17,7 @@ public class EmployeeWageComputation {
         System.out.println("Welcome to Employee Wage Computation Program on Master Branch");
 
         // Loop to execute the process till the condition satisfies
-        while(TOTAL_DAYS < 20 && TOTAL_HOURS < 100) {
+        while(TOTAL_DAYS < 20 && TOTAL_HOURS <= 100) {
 
             TOTAL_DAYS ++; // Increamenting the days each time loop is executed
 
