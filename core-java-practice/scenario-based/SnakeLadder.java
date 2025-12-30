@@ -26,9 +26,11 @@ public class SnakeLadder {
                 System.out.print("Position is " + POSITION);
 
             } else if(option == 1) {
-
+                if(POSITION + roll <= 100) { // Condiiton for exactly reaching 100
+                    POSITION += roll;
+                }
                 System.out.println("\nLadder Condition");
-                System.out.print("Position is: " + (POSITION += roll));
+                System.out.print("Position is: " + POSITION);
 
             } else {
 
