@@ -96,18 +96,18 @@ public class LibraryManagement {
         System.out.print("Enter partial title: ");
         String key = sc.nextLine().toLowerCase();
 
-        boolean FOUND = false;
+        boolean found = false;
         
         // Loop for searching a book 
         for(Book b : library) {
             if(b.title.toLowerCase().contains(key)) {
                 System.out.println(b.title + " by " + b.author +
                         " [" + (b.available ? "Available" : "Checked Out") + "]");
-                FOUND = true;
+                found = true;
             }
         }
-        
-        if(!FOUND) { // If book not found
+
+        if(!found) { // If book not found
         	System.out.println("Book not found");
         }
     }

@@ -188,20 +188,19 @@ public class EcommercePlatform {
         
         for(Product product : products) {
 
-            double TAX = 0; // Variable for tax value
+            double tax = 0; // Variable for tax value
 
             // Condition to calculate tax only if product is taxable
             if(product instanceof Taxable) {
-                TAX = ((Taxable) product).calculateTax(); // Calling the method to calculate tax
+                tax = ((Taxable) product).calculateTax(); // Calling the method to calculate tax
             }
 
             double discount = product.calculateDiscount(); // Calling the method to calculate discount
-            double finalPrice = product.getPrice() + TAX - discount; // Calling the method to calculate the price
-
+            double finalPrice = product.getPrice() + tax - discount; // Calling the method to calculate the price
             product.displayProduct(); // Calling the method to display the product details
             
             System.out.println("Discount on the product is: " + String.format("%.2f", discount));
-            System.out.println("Tax applied on the product is: " + String.format("%.2f", TAX));
+            System.out.println("Tax applied on the product is: " + String.format("%.2f", tax));
             System.out.println("Final Price of the product is: " + String.format("%.2f", finalPrice));
             System.out.println("--------------------------------------");
         }

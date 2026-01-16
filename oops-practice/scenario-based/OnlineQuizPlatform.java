@@ -18,14 +18,14 @@ public class OnlineQuizPlatform {
             throw new InvalidQuizSubmissionException("Answer length mismatch");
         }
 
-        int SCORE = 0; // Variable to store the score of student
+        int score = 0; // Variable to store the score of student
         
         for(int i=0; i<correct.length; i++) {
             if (correct[i].equalsIgnoreCase(user[i])) {
-                SCORE ++;
+                score++;
             }
         }
-        return SCORE;
+        return score;
     }
 
     // Creating a method to return grade based on score

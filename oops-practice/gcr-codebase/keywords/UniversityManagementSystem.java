@@ -4,7 +4,7 @@ class Student {
     static String universityName = "Global University";
 
     // Creating a static variable to count total number of students
-    static int TOTAL_STUDENTS = 0;
+    static int totalStudents = 0;
 
     // Creating instance variables
     String name;
@@ -18,12 +18,12 @@ class Student {
         this.rollNumber = rollNumber; 
         this.name = name;             
         this.grade = grade;          
-        TOTAL_STUDENTS ++; // incrementing student count
+        totalStudents++; // incrementing student count
     }
 
     // Creating a static method to display total number of students
     static void displayTotalStudents() {
-        System.out.println("Total Students Enrolled: " + TOTAL_STUDENTS);
+        System.out.println("Total Students Enrolled: " + totalStudents);
     }
 
     // Creating a method to display student details using instanceof to check object type

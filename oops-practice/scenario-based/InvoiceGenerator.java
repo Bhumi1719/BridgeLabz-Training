@@ -23,7 +23,7 @@ public class InvoiceGenerator {
 
     // Creating a method to calculate the total invoice amount 
     public static int getTotalAmount(String[] tasks) throws InvalidInvoiceFormatException {
-        int TOTAL = 0; // Variable for storing the total amount
+        int total = 0; // Variable for storing the total amount
 
         // Loop through each task
         for(String task : tasks) {
@@ -59,10 +59,10 @@ public class InvoiceGenerator {
 
             // Converting string amount to integer
             int amount = Integer.parseInt(amountString);
-            TOTAL += amount; // Adding amount through each task into the total
+            total += amount; // Adding amount through each task into the total
         }
 
-        return TOTAL;
+        return total;
     }
 
     public static void main(String[] args) {

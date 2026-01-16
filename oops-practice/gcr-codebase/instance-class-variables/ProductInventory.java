@@ -5,13 +5,13 @@ class Product {
     double price;
 
     // Creating Class variable (shared among all)
-    static int TOTAL_PRODUCTS = 0;
+    static int totalProducts = 0;
 
     // Creating a constructor of the class
     Product(String productName, double price) {
         this.productName = productName;
     	this.price = price;
-    	TOTAL_PRODUCTS ++; // For counting each product created
+    	totalProducts++; // For counting each product created
     }
 
     // Creating an instance method to display product details
@@ -22,7 +22,7 @@ class Product {
 
     // Creating a class method to display the total products
     static void displayTotalProducts() {
-    	System.out.println("Total Products are: " + TOTAL_PRODUCTS);
+    	System.out.println("Total Products are: " + totalProducts);
     }
      
 }

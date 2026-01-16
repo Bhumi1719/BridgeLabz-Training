@@ -30,20 +30,19 @@ public class WordsInParagraph {
         String[] words = paragraph.split("\\s+");
 
         // For counting words in the paragraph
-        int WORD_COUNT = words.length;
+        final int WORD_COUNT = words.length;
         System.out.println("The number of words in the paragraph are: " + WORD_COUNT);
 
-        String LONGEST = words[0]; // Variable to store the longest word in paragraph
+        String longest = words[0]; // Variable to store the longest word in paragraph
 
         // Loop for finding the longest word in the paragraph
         for(String word : words) {
-            if(word.length() > LONGEST.length()) {
-                LONGEST = word;
+            if(word.length() > longest.length()) {
+                longest = word;
             }
         }
 
-        System.out.println("Longest Word in the paragraph is: " + LONGEST);
-
+        System.out.println("Longest Word in the paragraph is: " + longest);
         // For replacing the word(case-insensitive)
         String replaceWord = paragraph.replaceAll("(?i)\\b" + wordToReplace + "\\b", newWord);
         

@@ -25,19 +25,19 @@ public class TextFormatter {
         StringBuilder result = new StringBuilder();
 
         // Creating a variable to track that first letter is capital for each sentence
-        boolean NEXT_CAPITAL = true;
+        boolean nextCapital = true;
 
         // Loop for capitalizing first letter of each sentence
         for(char character : paragraph.toCharArray()) {
-            if(NEXT_CAPITAL && Character.isLetter(character)) {
+            if(nextCapital && Character.isLetter(character)) {
                 result.append(Character.toUpperCase(character));
-                NEXT_CAPITAL = false;
+                nextCapital = false;
             } else {
                 result.append(character); // Adding the character to the string builder
             }
 
             if(character == '.' || character == '!' || character == '?') { // Checking for punctuations
-                NEXT_CAPITAL = true;
+                nextCapital = true;
             }
         }
 

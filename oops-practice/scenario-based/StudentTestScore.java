@@ -45,30 +45,29 @@ public class StudentTestScore {
         }
 
         // Calculate average, highest, and lowest
-        int SUM = 0; // For storing the sum of marks of students
-        int HIGHEST_MARKS = marks[0]; // For storing the highest marks of students
-        int LOWEST_MARKS = marks[0]; // For storing the lowest marks of students
+        int sum = 0; // For storing the sum of marks of students
+        int highestMarks = marks[0]; // For storing the highest marks of students
+        int lowestMarks = marks[0]; // For storing the lowest marks of students
 
         // Loop for finding the sum of marks, highest marks and lowest marks of the students
         for(int mark : marks) {
-            SUM += mark;
+            sum += mark;
 
             // Condition for finding the highest marks
-            if(mark > HIGHEST_MARKS) {
-                HIGHEST_MARKS = mark;
+            if(mark > highestMarks) {
+                highestMarks = mark;
             }
 
             // Condition for finding the lowest marks
-            if(mark < LOWEST_MARKS) {
-                LOWEST_MARKS = mark;
+            if(mark < lowestMarks) {
+                lowestMarks = mark;
             }
         }
 
-        double averageMarks = (double) SUM / students; // Calculating the average of the marks of students
-
+        double averageMarks = (double) sum / students; // Calculating the average of the marks of students
         System.out.println("\nAverage marks are: " + averageMarks);
-        System.out.println("Highest marks are: " + HIGHEST_MARKS);
-        System.out.println("Lowest marks are: " + LOWEST_MARKS);
+        System.out.println("Highest marks are: " + highestMarks);
+        System.out.println("Lowest marks are: " + lowestMarks);
 
         // Loop for displaying marks above average
         System.out.println("Scores above average are: ");

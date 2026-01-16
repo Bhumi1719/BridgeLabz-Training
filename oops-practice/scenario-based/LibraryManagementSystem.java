@@ -41,11 +41,11 @@ class LibraryManagementSystem {
     }
 
     // Array to store the titles of the books
-    static String[] TITLES = {"2States", "The Alchemist", "Life of Pie", "1984"};
+    static final String[] TITLES = {"2States", "The Alchemist", "Life of Pie", "1984"};
 
     // Array to store the authors of the books
-    static String[] AUTHORS = {"Chetan Bhagat", "Paulo Coehlo", "Yann Martel", "George Orwell"};
-    static boolean[] IS_CHECKEDOUT = {false, true, false, false};
+    static final String[] AUTHORS = {"Chetan Bhagat", "Paulo Coehlo", "Yann Martel", "George Orwell"};
+    static final boolean[] IS_CHECKEDOUT = {false, true, false, false};
 
     // Method to display the books and its status
     public static void displayBooks() {

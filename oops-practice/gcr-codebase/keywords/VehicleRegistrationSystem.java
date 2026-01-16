@@ -1,7 +1,7 @@
 // Creating a class named Vehicle with different types of attributes
 class Vehicle {
     // Creating static variable(shared by all)
-    static double REGISTRATION_FEE = 150.0;
+    static double registrationFee = 150.0;
 
     // Creating instance variables
     String ownerName;
@@ -19,7 +19,7 @@ class Vehicle {
 
     // Creating a static method to update the registration fees
     static void updateRegistrationFee(double fee) {
-        REGISTRATION_FEE = fee;
+        registrationFee = fee;
     }
 
     // Creating a method using instanceof to check obj type
@@ -30,7 +30,7 @@ class Vehicle {
             System.out.println("Owner Name: " + vehicle.ownerName);
             System.out.println("Vehicle Type: " + vehicle.vehicleType);
             System.out.println("Registration Number: " + vehicle.registrationNumber);
-            System.out.println("Registration Fee: $" + REGISTRATION_FEE);
+            System.out.println("Registration Fee: $" + registrationFee);
         }
     }
 }

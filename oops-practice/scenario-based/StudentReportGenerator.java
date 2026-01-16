@@ -1,5 +1,3 @@
-package scenarioBased;
-
 import java.util.*;
 
 // Creating a class for custom Exception
@@ -40,12 +38,12 @@ public class StudentReportGenerator {
 
     // Creating a method for calculating the average of marks
     public static double calculateAverage(int[] marks) {
-        int SUM = 0;
+        int sum = 0;
         
         for(int mark : marks) {
-        	SUM += mark;
+        	sum += mark;
         }
-        return SUM / (double) marks.length; // Returning the calculated average
+        return sum / (double) marks.length; // Returning the calculated average
     }
 
     // Creating a method to find the grade

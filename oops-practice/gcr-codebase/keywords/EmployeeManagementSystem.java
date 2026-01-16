@@ -4,7 +4,7 @@ class Employee {
     static String companyName = "Tech Solutions Inc.";
 
     // Creating a static variable to count total number of employees
-    static int TOTAL_EMPLOYEES = 0;
+    static int totalEmployees = 0;
 
     // Creating instance variables
     String name;
@@ -18,12 +18,12 @@ class Employee {
         this.id = id;                   
         this.name = name;               
         this.designation = designation; 
-        TOTAL_EMPLOYEES ++; // Incrementing employee count
+        totalEmployees++; // Incrementing employee count
     }
 
     // Creating a static method to display total number of employees
     static void displayTotalEmployees() {
-        System.out.println("Total Employees: " + TOTAL_EMPLOYEES);
+        System.out.println("Total Employees: " + totalEmployees);
     }
 
     // Creating a method using instanceof to display employee details

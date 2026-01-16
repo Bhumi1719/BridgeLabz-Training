@@ -1,5 +1,3 @@
-package scenarioBased;
-
 import java.util.Scanner;
 
 class InvalidScoreException extends Exception {
@@ -52,40 +50,40 @@ public class StudentScoreAnalyzer {
 	}
 	
 	public static double calculateAverage(int[] scoreStudents) {
-		int SUM = 0; // Variable to store the sum of scores for each student
+		int sum = 0; // Variable to store the sum of scores for each student
 		
 		// Loop for adding the scores of each student
 		for(int i=0; i<scoreStudents.length; i++) {
-			SUM += scoreStudents[i];
+			sum += scoreStudents[i];
 		}
 		
-		double average = SUM / scoreStudents.length; // Calculating the average of scores
+		double average = sum / scoreStudents.length; // Calculating the average of scores
 		
 		return average;
 	}
 	
 	public static int findMax(int[] scoreStudents) {
-		int MAX_SCORE = scoreStudents[0]; // Variable for storing the maximum score of students
+		int maxScore = scoreStudents[0]; // Variable for storing the maximum score of students
 		
 		for(int i=0; i<scoreStudents.length; i++) {
-			if(scoreStudents[i] > MAX_SCORE) {
-				MAX_SCORE = scoreStudents[i];
+			if(scoreStudents[i] > maxScore) {
+				maxScore = scoreStudents[i];
 			}
 		}
 		
-		return MAX_SCORE;
+		return maxScore;
 	}
 	
 	public static int findMin(int[] scoreStudents) {
-		int MIN_SCORE = scoreStudents[0]; // Variable for storing the maximum score of students
+		int minScore = scoreStudents[0]; // Variable for storing the minimum score of students
 		
 		for(int i=0; i<scoreStudents.length; i++) {
-			if(scoreStudents[i] < MIN_SCORE) {
-				MIN_SCORE = scoreStudents[i];
+			if(scoreStudents[i] < minScore) {
+				minScore = scoreStudents[i];
 			}
 		}
 		
-		return MIN_SCORE;
+		return minScore;
 	}
 
 }

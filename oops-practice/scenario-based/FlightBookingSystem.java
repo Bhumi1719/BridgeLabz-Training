@@ -46,7 +46,7 @@ public class FlightBookingSystem {
     static List<Booking> bookings = new ArrayList<>();
 
     static Scanner sc = new Scanner(System.in);
-    static int BOOKING_CENTER = 1;
+    static int bookingCenter = 1;
 
     public static void main(String[] args) {
         while(true) {
@@ -86,16 +86,16 @@ public class FlightBookingSystem {
         System.out.print("Enter destination: ");
         String dest = sc.next();
 
-        boolean FOUND = false;
+        boolean found = false;
 
         for(Flight flight : flights) {
             if(flight.source.equalsIgnoreCase(src) && flight.destination.equalsIgnoreCase(dest)) {
 
                 System.out.println("Flight ID: " + flight.flightId + ", Seats Available: " + flight.seats);
-                FOUND = true;
+                found = true;
             }
         }
-        if(!FOUND) {
+        if(!found) {
             System.out.println("No flights found");
         }
     }
@@ -111,8 +111,8 @@ public class FlightBookingSystem {
                     System.out.print("Passenger Name: ");
                     String name = sc.next();
 
-                    bookings.add(new Booking(BOOKING_CENTER ++, name, flight));
-                    flight.seats --;
+                    bookings.add(new Booking(bookingCenter++, name, flight));
+                    flight.seats--;
 
                     System.out.println("Booking Successful");
                 } else {

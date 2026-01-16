@@ -41,12 +41,12 @@ public class EduQuiz {
 
     // Creating a method to calculate score
     public static int calculateScore(String[] correct, String[] student) {
-        int SCORE = 0; // Variable to store the score
+        int score = 0; // Variable to store the score
         for(int i=0; i<correct.length; i++) {
             if(correct[i].equalsIgnoreCase(student[i])) {
-                SCORE ++; // Icreamenting the score
+                score++; // Incrementing the score
             }
         }
-        return SCORE;
+        return score;
     }
 }

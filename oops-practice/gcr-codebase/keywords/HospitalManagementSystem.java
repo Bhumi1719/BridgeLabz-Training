@@ -4,7 +4,7 @@ class Patient {
     static String hospitalName = "City Hospital";
 
     // Creating static variable to count total number of patients
-    static int TOTAL_PATIENTS = 0;
+    static int totalPatients = 0;
 
     // Creating instance variables
     String name;
@@ -20,12 +20,12 @@ class Patient {
         this.name = name;           
         this.age = age;             
         this.ailment = ailment;    
-        TOTAL_PATIENTS++; // incrementing patient count
+        totalPatients++; // incrementing patient count
     }
 
     // Creating static method to display total number of patients
     static void getTotalPatients() {
-        System.out.println("Total Patients Admitted: " + TOTAL_PATIENTS);
+        System.out.println("Total Patients Admitted: " + totalPatients);
     }
 
     // Creating method using instanceof to check object type

@@ -8,11 +8,11 @@ class MathUtility {
         if(number < 0) {
             return -1; // For invalid input
         }
-        long FACTORIAL = 1; // Variable for storing the factorial of number
+        long factorial = 1; // Variable for storing the factorial of number
         for(int i=1; i<=number; i++) {
-            FACTORIAL *= i;
+            factorial *= i;
         }
-        return FACTORIAL;
+        return factorial;
     }
 
     // Creating a method to check number is prime or not
@@ -63,14 +63,14 @@ class MathUtility {
         	return 1;
         }
 
-        int FIRST = 0;
-        int SECOND = 1;
+        int first = 0;
+        int second = 1;
         for(int i = 2; i <= number; i++) {
-            int third = FIRST + SECOND;
-            FIRST = SECOND;
-            SECOND = third;
+            int third = first + second;
+            first = second;
+            second = third;
         }
-        return SECOND;
+        return second;
     }
 }
     

@@ -1,6 +1,6 @@
 class Product {
     // Creating a static variable(shared by all)
-    static double DISCOUNT = 10.0; 
+    static double discount = 10.0; 
 
     // Creating instance variables
     String productName;
@@ -20,7 +20,7 @@ class Product {
 
     // Creating static method to update the discount
     static void updateDiscount(double newDiscount) {
-        DISCOUNT = newDiscount;
+        discount = newDiscount;
     }
 
     // Creating a method using instanceof to check object type
@@ -29,13 +29,13 @@ class Product {
             Product product = (Product) obj; // Type casting
 
             // Calculating the price after discount
-            double priceAfterDiscount = product.price - (product.price * DISCOUNT / 100);
+            double priceAfterDiscount = product.price - (product.price * discount / 100);
 
             System.out.println("Product ID: " + product.productID);
             System.out.println("Product Name: " + product.productName);
             System.out.println("Price: $" + product.price);
             System.out.println("Quantity: " + product.quantity);
-            System.out.println("Discount: " + DISCOUNT + "%");
+            System.out.println("Discount: " + discount + "%");
             System.out.println("Price after Discount: $" + priceAfterDiscount);
             System.out.println();
         }
