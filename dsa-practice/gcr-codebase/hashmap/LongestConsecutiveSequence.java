@@ -9,7 +9,7 @@ public class LongestConsecutiveSequence {
             map.put(num, true);
         }
 
-        int LONGEST = 0;
+        int longest = 0;
 
         for(int num : arr) {
             // Starting only if previous number is not present
@@ -21,10 +21,10 @@ public class LongestConsecutiveSequence {
                     CURRENT++;
                     COUNT++;
                 }
-                LONGEST = Math.max(LONGEST, COUNT);
+                longest = Math.max(longest, COUNT);
             }
         }
-        return LONGEST;
+        return longest;
     }
 
     public static void main(String[] args) {

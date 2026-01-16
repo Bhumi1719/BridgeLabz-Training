@@ -7,23 +7,23 @@ public class LongestCommonPrefix {
             return "";
         }
 
-        String PREFIX = str[0];
-        int PREFIX_LENGTH = PREFIX.length();
+        String prefix = str[0];
+        int prefixLength = prefix.length();
 
         for(int i=1; i<str.length; i++) {
             String s = str[i];
-            while(PREFIX_LENGTH > s.length() || !PREFIX.equals(s.substring(0, PREFIX_LENGTH))) {
-                PREFIX_LENGTH --;
+            while(prefixLength > s.length() || !prefix.equals(s.substring(0, prefixLength))) {
+                prefixLength --;
 
-                if(PREFIX_LENGTH == 0) {
+                if(prefixLength == 0) {
                     return "";
                 }
 
-                PREFIX = PREFIX.substring(0, PREFIX_LENGTH);
+                prefix = prefix.substring(0, prefixLength);
             }
         }
 
-        return PREFIX;        
+        return prefix;        
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

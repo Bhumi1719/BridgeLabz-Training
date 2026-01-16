@@ -3,22 +3,22 @@ import java.util.*;
 public class CircularTour {
 
     public static int findStart(int[] petrol, int[] distance) {
-        int TOTAl = 0;
-        int CURRENT = 0;
-        int START = 0;
+        int total = 0;
+        int current = 0;
+        int start = 0;
 
         for(int i=0; i<petrol.length; i++) {
             int diff = petrol[i] - distance[i];
-            TOTAl += diff;
-            CURRENT += diff;
+            total += diff;
+            current += diff;
 
-            if(CURRENT < 0) {
-                START = i + 1;
-                CURRENT = 0;
+            if(current < 0) {
+                start = i + 1;
+                current = 0;
             }
         }
 
-        return (TOTAl >= 0) ? START : -1;
+        return (total >= 0) ? start : -1;
     }
 
     public static void main(String[] args) {

@@ -9,22 +9,22 @@ public class QuickSort {
             quickSort(prices, pi + 1, high);
         }
     }
-
+    
     private static int partition(int[] prices, int low, int high) {
-        int PIVOT = prices[high];
-        int START = low - 1;
+        final int PIVOT = prices[high];
+        int start = low - 1;
         for(int j=low; j<high; j++) {
             if(prices[j] < PIVOT) {
-                START ++;
-                int temp = prices[START];
-                prices[START] = prices[j];
+                start++;
+                int temp = prices[start];
+                prices[start] = prices[j];
                 prices[j] = temp;
             }
         }
-        int temp = prices[START + 1];
-        prices[START + 1] = prices[high];
+        int temp = prices[start + 1];
+        prices[start + 1] = prices[high];
         prices[high] = temp;
-        return START + 1;
+        return start + 1;
     }
 
     public static void main(String[] args) {

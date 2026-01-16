@@ -4,20 +4,20 @@ public class SearchInsertPosition {
 
     public static int searchInsert(int[] nums, int target) {
 
-        int INDEX = 0 ;
+        int index = 0 ;
 
         for(int i=0; i<nums.length; i++){
             if(nums[i] == target){
-                INDEX = i;
+                index = i;
             } else if(target <= nums[nums.length - 1]){
                 if(target > nums[i] && target <nums[i+1]){
-                    INDEX = i+1;
+                    index = i+1;
                 }
             } else
-                INDEX = nums.length;
+                index = nums.length;
         }
 
-        return INDEX;
+        return index;
     }
 
     public static void main(String[] args) {

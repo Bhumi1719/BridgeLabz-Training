@@ -5,18 +5,18 @@ public class SelectionSort {
     
     public static void selectionSort(int[] marks) {
         for(int i=0; i<marks.length - 1; i++) {
-            int MIN_INDEX = i;
+            int minIndex = i;
 
             // Loop for finding minimum in unsorted part
             for(int j=i + 1; j<marks.length; j++) {
-                if(marks[j] < marks[MIN_INDEX]) {
-                    MIN_INDEX = j;
+                if(marks[j] < marks[minIndex]) {
+                    minIndex = j;
                 }
             }
 
             // Swapping the elements
-            int temp = marks[MIN_INDEX];
-            marks[MIN_INDEX] = marks[i];
+            int temp = marks[minIndex];
+            marks[minIndex] = marks[i];
             marks[i] = temp;
         }
     }

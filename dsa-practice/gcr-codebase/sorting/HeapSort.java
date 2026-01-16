@@ -24,7 +24,7 @@ public class HeapSort {
     }
 
     public static void heapSort(int[] salary) {
-        int SIZE = salary.length;
+        final int SIZE = salary.length;
 
         // Loop for building Max Heap
         for(int i=(SIZE / 2) - 1; i>=0; i--)
@@ -39,6 +39,7 @@ public class HeapSort {
             heapify(salary, i, 0);
         }
     }
+    
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

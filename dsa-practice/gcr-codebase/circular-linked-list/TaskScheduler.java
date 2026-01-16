@@ -62,11 +62,11 @@ public class TaskScheduler {
         }
 
         TaskNode temp = head;
-        int COUNT = 1;
+        int count = 1;
 
-        while(COUNT < pos - 1 && temp.next != head) {
+        while(count < pos - 1 && temp.next != head) {
             temp = temp.next;
-            COUNT ++;
+            count++;
         }
 
         TaskNode newNode = new TaskNode(id, name, pr, date);
@@ -161,17 +161,17 @@ public class TaskScheduler {
         }
 
         TaskNode temp = head;
-        boolean FOUND = false;
+        boolean found = false;
 
         do {
             if(temp.priority == pr) {
                 System.out.println( "ID: " + temp.taskId + ", Name: " + temp.taskName + ", Due Date: " + temp.dueDate);
-                FOUND = true;
+                found = true;
             }
             temp = temp.next;
         } while(temp != head);
 
-        if(!FOUND)
+        if(!found)
             System.out.println("No task found with given priority");
     }
 

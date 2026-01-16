@@ -3,7 +3,7 @@ import java.util.*;
 class BubbleSort {
 
     public static void bubbleSort(int[] marks) {
-        int SIZE = marks.length;
+        final int SIZE = marks.length;
         boolean swapped;
 
         for(int i=0; i<SIZE - 1; i++) {

@@ -3,23 +3,23 @@ import java.util.Scanner;
 public class SquareRoot {
     
     public static int mySqrt(int number) {
-        int START = 0 ;
-        int END = number ;
-        int RESULT = 0 ;
+        int start = 0 ;
+        int end = number ;
+        int result = 0 ;
         
-        while(START <= END){
-            int mid = START + (END - START) / 2 ;
+        while(start <= end){
+            int mid = start + (end - start) / 2 ;
             if((long)mid * mid == (long)number){
-                RESULT = mid ;
+                result = mid ;
                 break ;
             }else if ((long)mid * mid < (long)number){
-                RESULT = mid ;
-                START = mid + 1;
+                result = mid ;
+                start = mid + 1;
             }else{
-                END = mid - 1 ; 
+                end = mid - 1 ; 
             }
         }
-        return RESULT ;
+        return result ;
     }
 
     public static void main(String[] args) {

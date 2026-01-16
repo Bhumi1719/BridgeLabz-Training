@@ -77,7 +77,7 @@ public class RoundRobinScheduling {
             return;
         }
 
-        int TIME = 0;
+        int time = 0;
         ProcessNode curr = head;
         ProcessNode prev = tail;
         int totalProcesses = countProcesses();
@@ -87,7 +87,7 @@ public class RoundRobinScheduling {
             if(curr.remainingTime > 0) {
                 int execTime = Math.min(curr.remainingTime, timeQuantum);
                 curr.remainingTime -= execTime;
-                TIME += execTime;
+                time += execTime;
 
                 // Update waiting time for other processes
                 ProcessNode temp = head;
@@ -121,26 +121,26 @@ public class RoundRobinScheduling {
             return 0;
         }
 
-        int COUNT = 0;
+        int count = 0;
         ProcessNode temp = head;
 
         do {
-            COUNT ++;
+            count++;
             temp = temp.next;
         } while(temp != head);
 
-        return COUNT;
+        return count;
     }
 
     // Creating a method to display average time
     public static void displayAverages(int n) {
         ProcessNode temp = head;
-        double TOTAL_WAITING_TIME = 0;
-        double TOTAL_TURNAROUND_TIME = 0;
+        double totalWaitingTime = 0;
+        double totalTurnaroundTime = 0;
 
         System.out.println("\nProcess Execution Completed");
-        System.out.println("Average Waiting Time: " + (TOTAL_WAITING_TIME / n));
-        System.out.println("Average Turnaround Time: " + (TOTAL_TURNAROUND_TIME / n));
+        System.out.println("Average Waiting Time: " + (totalWaitingTime / n));
+        System.out.println("Average Turnaround Time: " + (totalTurnaroundTime / n));
     }
 
     public static void main(String[] args) {

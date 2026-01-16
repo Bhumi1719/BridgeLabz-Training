@@ -1,6 +1,8 @@
 public class VehicleQueue {
     private Vehicle[] queue;
-    private int front = 0, rear = -1, size = 0;
+    private int front = 0;
+    private int rear = -1;
+    private int size = 0;
 
     public VehicleQueue(int capacity) {
         queue = new Vehicle[capacity];

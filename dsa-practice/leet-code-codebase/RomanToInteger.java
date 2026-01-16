@@ -13,16 +13,16 @@ public class RomanToInteger {
         m.put('D', 500);
         m.put('M', 1000);
         
-        int RESULT = 0;
+        int result = 0;
         
         for(int i=0; i<str.length(); i++) {
             if(i<str.length() - 1 && m.get(str.charAt(i)) < m.get(str.charAt(i + 1))) {
-                RESULT -= m.get(str.charAt(i));
+                result -= m.get(str.charAt(i));
             } else {
-                RESULT += m.get(str.charAt(i));
+                result += m.get(str.charAt(i));
             }
         }        
-        return RESULT;
+        return result;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

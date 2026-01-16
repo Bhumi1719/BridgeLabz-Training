@@ -3,11 +3,11 @@ import java.util.Scanner;
 public class SingleNumber {
     
     public static int singleNumber(int[] nums) {
-        int RESULT = 0;
+        int result = 0;
         for(int num : nums) {
-            RESULT ^= num;
+            result ^= num;
         }
-        return RESULT;
+        return result;
     }
 
     public static void main(String[] args) {

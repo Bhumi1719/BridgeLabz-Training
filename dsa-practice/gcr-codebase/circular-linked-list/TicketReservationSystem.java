@@ -108,19 +108,19 @@ public class TicketReservationSystem {
         }
 
         TicketNode temp = head;
-        boolean FOUND = false;
+        boolean found = false;
 
         do {
             if(temp.customerName.equalsIgnoreCase(key) ||
                 temp.movieName.equalsIgnoreCase(key)) {
 
                 System.out.println("ID: " + temp.ticketId + ", Customer: " + temp.customerName + ", Movie: " + temp.movieName + ", Seat: " + temp.seatNumber + ", Time: " + temp.bookingTime);
-                FOUND = true;
+                found = true;
             }
             temp = temp.next;
         } while(temp != head);
 
-        if(!FOUND)
+        if(!found)
             System.out.println("No matching ticket found");
     }
 
@@ -131,15 +131,15 @@ public class TicketReservationSystem {
             return;
         }
 
-        int COUNT = 0;
+        int count = 0;
         TicketNode temp = head;
 
         do {
-            COUNT ++;
+            count++;
             temp = temp.next;
         } while(temp != head);
 
-        System.out.println("Total booked tickets: " + COUNT);
+        System.out.println("Total booked tickets: " + count);
     }
 
     public static void main(String[] args) {

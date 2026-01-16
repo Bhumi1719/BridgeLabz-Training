@@ -11,24 +11,24 @@ public class EventManager {
     }
 
     public static int partition(int[] arr, int low, int high) {
-        int PIVOT = arr[high];   // last element as pivot
-        int INDEX = low - 1;
+        final int PIVOT = arr[high];   // last element as pivot
+        int index = low - 1;
 
         for(int j=low; j<high; j++) {
             if(arr[j] < PIVOT) {
-                INDEX ++;
+                index ++;
 
-                int temp = arr[INDEX];
-                arr[INDEX] = arr[j];
+                int temp = arr[index];
+                arr[index] = arr[j];
                 arr[j] = temp;
             }
         }
 
-        int temp = arr[INDEX + 1];
-        arr[INDEX + 1] = arr[high];
+        int temp = arr[index + 1];
+        arr[index + 1] = arr[high];
         arr[high] = temp;
 
-        return INDEX + 1;
+        return index + 1;
     }
 
     public static void main(String[] args) {

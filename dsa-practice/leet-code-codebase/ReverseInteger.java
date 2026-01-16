@@ -3,18 +3,17 @@ import java.util.Scanner;
 public class ReverseInteger {
     
     public static int reverse(int number) {
-        long NUM = 0;
+        long num = 0;
         while(number != 0){
             int n = number % 10;
             number = number / 10;
-            NUM = (NUM * 10) + n;
-
+            num = (num * 10) + n;
         }
 
-        if(NUM > Integer.MAX_VALUE || NUM < Integer.MIN_VALUE){
+        if(num > Integer.MAX_VALUE || num < Integer.MIN_VALUE){
             return 0;
         }
-        return (int)NUM;
+        return (int)num;
     }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

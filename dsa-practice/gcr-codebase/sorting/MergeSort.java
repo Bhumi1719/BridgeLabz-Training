@@ -14,8 +14,8 @@ public class MergeSort {
     }
 
         private static void merge(int[] bookPrices, int left, int mid, int right) {
-            int LEFT = mid - left + 1;
-            int RIGHT = right - mid;
+            final int LEFT = mid - left + 1;
+            final int RIGHT = right - mid;
 
             int[] leftArr = new int[LEFT];
             int[] rightArr = new int[RIGHT];

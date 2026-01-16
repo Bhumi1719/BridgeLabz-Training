@@ -4,9 +4,9 @@ import java.util.Scanner;
 public class CountingSort {
     
     public static void countingSort(int[] ages) {
-        int MIN_AGE = 10;
-        int MAX_AGE = 18;
-        int range = MAX_AGE - MIN_AGE + 1;
+        final int MIN_AGE = 10;
+        final int MAX_AGE = 18;
+        final int range = MAX_AGE - MIN_AGE + 1;
 
         int[] count = new int[range];
 
@@ -16,10 +16,10 @@ public class CountingSort {
         }
 
         // Build sorted array
-        int INDEX = 0;
+        int index = 0;
         for(int i=0; i<range; i++) {
             while(count[i] > 0) {
-                ages[INDEX++] = i + MIN_AGE;
+                ages[index++] = i + MIN_AGE;
                 count[i]--;
             }
         }

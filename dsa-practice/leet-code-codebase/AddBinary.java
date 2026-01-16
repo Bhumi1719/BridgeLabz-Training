@@ -12,15 +12,15 @@ public class AddBinary {
         int i = charArrA.length - 1;
         int j = charArrB.length - 1;
 
-        int CARRY = 0;
+        int carry = 0;
 
-        while(i >= 0 || j >= 0 || CARRY > 0) {
+        while(i >= 0 || j >= 0 || carry > 0) {
             int aNum = i >= 0 ? charArrA[i] - '0' : 0;
             int bNum = j >= 0 ? charArrB[j] - '0' : 0;
 
-            int sum = aNum + bNum + CARRY;
+            int sum = aNum + bNum + carry;
             int digit = sum % 2;
-            CARRY = sum / 2;
+            carry = sum / 2;
             i--;
             j--;
 

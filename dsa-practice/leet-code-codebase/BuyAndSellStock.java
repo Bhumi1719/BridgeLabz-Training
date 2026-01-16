@@ -3,19 +3,19 @@ import java.util.*;
 public class BuyAndSellStock {
 
     public static int maxProfit(int[] prices) {
-        int BUY = prices[0] ;
-        int MAX_PROFIT = 0 ;
+        int buy = prices[0] ;
+        int maxProfit = 0 ;
 
         for(int i=0; i<prices.length ; i++){
 
-            if(prices[i] < BUY){
-                BUY = prices[i] ;
+            if(prices[i] < buy){
+                buy = prices[i] ;
             }
 
-            MAX_PROFIT = Math.max(prices[i] - BUY , MAX_PROFIT);
+            maxProfit = Math.max(prices[i] - buy , maxProfit);
         }
 
-        return MAX_PROFIT ;
+        return maxProfit ;
     }
 
     public static void main(String[] args) {

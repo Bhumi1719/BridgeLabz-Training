@@ -18,8 +18,8 @@ class UndoRedoManager {
     private TextState head;      // Oldest state
     private TextState tail;      // Latest state
     private TextState current;   // Current state
-    private int SIZE = 0;
-    private final int MAX_SIZE = 10; // History limit
+    private int size = 0;
+    private final int maxSize = 10; // History limit
 
     // Creating a method to add new state
     public void addState(String text) {
@@ -30,26 +30,26 @@ class UndoRedoManager {
             current.next.prev = null;
             current.next = null;
             tail = current;
-            SIZE = calculateSize();
+            size = calculateSize();
         }
 
         // Add at end
         if(head == null) {
             head = tail = current = newState;
-            SIZE = 1;
+            size = 1;
         } else {
             tail.next = newState;
             newState.prev = tail;
             tail = newState;
             current = newState;
-            SIZE ++;
+            size++;
         }
 
         // Enforce max size
-        if(SIZE > MAX_SIZE) {
+        if(size > maxSize) {
             head = head.next;
             head.prev = null;
-            SIZE --;
+            size--;
         }
     }
 
@@ -84,13 +84,13 @@ class UndoRedoManager {
 
     // Creating a hepler method to recalculate size
     private int calculateSize() {
-        int COUNT = 0;
+        int count = 0;
         TextState temp = head;
         while(temp != null) {
-            COUNT ++;
+            count++;
             temp = temp.next;
         }
-        return COUNT;
+        return count;
     }
 }
 
