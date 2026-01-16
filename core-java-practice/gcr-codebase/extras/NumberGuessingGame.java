@@ -6,24 +6,24 @@ public class NumberGuessingGame {
     static Random random = new Random(); // Creating random object for guessing random numbers
 
     public static void main(String[] args) {
-        int LOW = 1;
-        int HIGH = 100;
-        boolean IS_GUESSED = false; // Variable to check whether coreect number is guessed or not
+        int low = 1;
+        int high = 100;
+        boolean isGuessed = false; // Variable to check whether coreect number is guessed or not
 
         System.out.println("Think of a number between 1 and 100");
 
         // Loop continues until correct number is guessed
-        while(!IS_GUESSED && LOW <= HIGH) {
-            int guess = generateGuess(LOW, HIGH); // Calling the method to generate number within the range
+        while(!isGuessed && low <= high) {
+            int guess = generateGuess(low, high); // Calling the method to generate number within the range
             String feedback = getUserFeedback(guess); // Calling the method to get feedback from the user
 
             if(feedback.equals("correct")) { // Checking feedback
                 System.out.println("YAY! Computer guessed your number correctly!");
-                IS_GUESSED = true;
+                isGuessed = true;
             } else {
-                int[] range = updateRange(feedback, guess, LOW, HIGH); // Calling the method to update the range according to the feedback
-                LOW = range[0];
-                HIGH = range[1];
+                int[] range = updateRange(feedback, guess, low, high); // Calling the method to update the range according to the feedback
+                low = range[0];
+                high = range[1];
             }
         }
     }

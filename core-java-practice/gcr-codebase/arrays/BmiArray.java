@@ -39,7 +39,7 @@ public class BmiArray {
             } else if (bmi[i] >= 25 && bmi[i] < 40){
                 status[i] = "Overweight";
             } else {
-                status[i] = "Obese"
+                status[i] = "Obese";
             }
         }
 

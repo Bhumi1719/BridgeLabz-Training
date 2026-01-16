@@ -1,7 +1,13 @@
-public class palin_part {
+import java.util.Scanner;
+
+public class PalindromePartition {
     public static void main(String[] args) {
-        String str = "naman";
-        part(str, ""); //Start palindrome partitioning
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the string: ");
+        String str = sc.next();
+
+        part(str, ""); // Start palindrome partitioning
     }
 
     //Recursive function to generate palindrome partitions

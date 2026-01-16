@@ -25,28 +25,28 @@ public class FitnessChallengeTracker {
             }
         }
 
-        int TOTAL = 0; // Variable to count the total push-ups done by sandeep
-        int DAYS = 0; // Variable to keep track of the number of days
+        int total = 0; // Variable to count the total push-ups done by sandeep
+        int days = 0; // Variable to keep track of the number of days
 
         for(int count : pushUps) {
             if(count == 0) { // If count is equal to 0 it means Sandeep is having a rest day
                 continue;
             }
 
-            TOTAL += count; // Adding push-ups done by Saqndeep each day in total
-            DAYS ++; // Increamenting day after each count
+            total += count; // Adding push-ups done by Saqndeep each day in total
+            days ++; // Increamenting day after each count
         }
 
         // Conditionals for calculating the average
         double average; // Variable for storing the average calculated
 
-        if(DAYS > 0) {
-            average = (double) TOTAL / DAYS;
+        if(days > 0) {
+            average = (double) total / days;
         } else {
             average = 0;
         }
 
-        System.out.println("\nThe total push-ups done by Sandeep in a week are: " + TOTAL);
+        System.out.println("\nThe total push-ups done by Sandeep in a week are: " + total);
         System.out.println("The average push-ups done by Sandeep in a week is: " + average);
     }
 }

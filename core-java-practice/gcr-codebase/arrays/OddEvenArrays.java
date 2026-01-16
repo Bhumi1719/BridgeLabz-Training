@@ -15,17 +15,29 @@ public class OddEvenArrays {
 
         // Conditional statement for checking if number number enterd is natural or not
         if(number > 0){
-            int EVEN_INDEX = 0; // Counter for even number
-            int ODD_INDEX = 0; // Counter for odd number
+            int evenIndex = 0; // Counter for even number
+            int oddIndex = 0; // Counter for odd number
 
             // For loop for adding even elements in even array and odd elements in odd array
             for(int i=1; i<=number; i++){
                 if(i % 2 == 0){
-                    even[EVEN_INDEX] = i; // If even element then add element to the even array at index 0 at starting
-                    EVEN_INDEX ++; // Even index is increamented for increasing the index to store elements one after other
+                    even[evenIndex] = i; // If even element then add element to the even array at index 0 at starting
+                    evenIndex ++; // Even index is increamented for increasing the index to store elements one after other
                 } else{
-                    odd[ODD_INDEX] = i; // If odd element then add element to the odd array at index 0 at starting
-                    ODD_INDEX ++; // Odd index is increamented for increasing the index to store elements one after other
+                    odd[oddIndex] = i; // If odd element then add element to the odd array at index 0 at starting
+                    oddIndex ++; // Odd index is increamented for increasing the index to store elements one after other
+                }
+            }
+
+            System.out.print("Elements of Even array are: ");
+            // For loop for printing the even array
+            for(int i=0; i<even.length; i++){
+                if(even[i] % 2 == 0){
+                    even[evenIndex] = i; // If even element then add element to the even array at index 0 at starting
+                    evenIndex ++; // Even index is increamented for increasing the index to store elements one after other
+                } else{
+                    odd[oddIndex] = i; // If odd element then add element to the odd array at index 0 at starting
+                    oddIndex ++; // Odd index is increamented for increasing the index to store elements one after other
                 }
             }
 

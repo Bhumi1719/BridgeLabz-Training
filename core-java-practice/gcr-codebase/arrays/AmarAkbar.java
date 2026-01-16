@@ -5,7 +5,7 @@ public class AmarAkbar {
         Scanner sc = new Scanner(System.in);
 
         // Declaring and initializing array with names of the three friends
-        String[] NAMES = {"Amar", "Akbar", "Anthony"};
+        final String[] NAMES = {"Amar", "Akbar", "Anthony"};
 
         // Declaring the array for storing ages of the three friends
         int[] age = new int[3];
@@ -23,22 +23,22 @@ public class AmarAkbar {
         }
 
         // Variable for checking status of yongest among three
-        int YOUNGEST = 0;
+        int youngest = 0;
 
-        // Variable for checking status of yongest among three
-        int TALLEST = 0;
+        // Variable for checking status of tallest among three
+        int tallest = 0;
 
         for (int i=1; i<3; i++) {
-            if (age[i] < age[YOUNGEST]) { // For checking youngest
-                YOUNGEST = i;
+            if (age[i] < age[youngest]) { // For checking youngest
+                youngest = i;
             }
             
-            if (height[i] > height[TALLEST]) { // For checking tallest
-                TALLEST = i;
+            if (height[i] > height[tallest]) { // For checking tallest
+                tallest = i;
             }
         }
 
-        System.out.println("Youngest among the three is " + NAMES[YOUNGEST]);
-        System.out.println("Tallest among the three is " + NAMES[TALLEST]);
+        System.out.println("Youngest among the three is " + NAMES[youngest]);
+        System.out.println("Tallest among the three is " + NAMES[tallest]);
     }
 }

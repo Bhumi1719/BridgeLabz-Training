@@ -8,21 +8,21 @@ public class LargestSecond {
         int number = sc.nextInt();
 
         // Initialialzing variable for array size
-        int MAX_DIGIT = 10;
+        int maxDigit = 10;
 
         // Declaring array to store the digits
-        int[] digits = new int[MAX_DIGIT];
+        int[] digits = new int[maxDigit];
 
         // Counter to keep track of index
-        int INDEX = 0;
+        int index = 0;
 
         // While loop for storing digits dynamically
         while (number != 0) {
 
             // This condition is added if the array size becomes full then to increase its size
-            if (INDEX== MAX_DIGIT) {
-                MAX_DIGIT = MAX_DIGIT + 10;
-                int[] temp = new int[MAX_DIGIT]; // New array with increased size
+            if (index == maxDigit) {
+                maxDigit = maxDigit + 10;
+                int[] temp = new int[maxDigit]; // New array with increased size
 
                 // Loop to copy elements from digits array to new array
                 for (int i=0; i<digits.length; i++) {
@@ -32,26 +32,26 @@ public class LargestSecond {
                 digits = temp; // Storing back to the digits array
             }
 
-            digits[INDEX] = number % 10;
-            INDEX ++;
+            digits[index] = number % 10;
+            index ++;
             number /= 10;
         }
 
         // Initializing largest and second largest
-        int LARGEST= 0;
-        int SECOND_LARGEST = 0;
+        int largest= 0;
+        int secondLargest = 0;
 
         // For loop for finding the largest and secong largest element
-        for (int i=0; i<INDEX; i++) {
-            if (digits[i] > LARGEST) {
-                SECOND_LARGEST = LARGEST;
-                LARGEST = digits[i];
-            } else if (digits[i] > SECOND_LARGEST && digits[i] != LARGEST) {
-                SECOND_LARGEST = digits[i];
+        for (int i=0; i<index; i++) {
+            if (digits[i] > largest) {
+                secondLargest = largest;
+                largest = digits[i];
+            } else if (digits[i] > secondLargest && digits[i] != largest) {
+                secondLargest = digits[i];
             }
         }
 
-        System.out.println("Largest digit is " + LARGEST);
-        System.out.println("Second largest digit is " + SECOND_LARGEST);
+        System.out.println("Largest digit is " + largest);
+        System.out.println("Second largest digit is " + secondLargest);
     }
 }

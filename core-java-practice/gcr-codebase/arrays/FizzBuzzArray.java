@@ -11,23 +11,23 @@ public class FizzBuzzArray {
         String[] fizzBuzz = new String[number];
 
         // Counter for tracking the index of the array 
-        int COUNTER = 0;
+        int counter = 0;
 
         // Conditionals to check whether it is a positive number or not
         if(number > 0){
             for (int i = 1; i <= number; i++) { // Loop for checking each element upt the number
                 if (i % 3 == 0 && i % 5 == 0) { // For multiples of both 3 and 5
-                    fizzBuzz[COUNTER] = "FizzBuzz";
-                    COUNTER ++;
+                    fizzBuzz[counter] = "FizzBuzz";
+                    counter++;
                 } else if (i % 3 == 0) { // For multiples of only 3
-                    fizzBuzz[COUNTER] = "Fizz";
-                    COUNTER ++;
+                    fizzBuzz[counter] = "Fizz";
+                    counter++;
                 } else if (i % 5 == 0) { // For multiples of only 5
-                    fizzBuzz[COUNTER] = "Buzz";
-                    COUNTER ++;
+                    fizzBuzz[counter] = "Buzz";
+                    counter++;
                 } else { // For other numbers
-                    fizzBuzz[COUNTER] = String.valueOf(i);
-                    COUNTER ++;
+                    fizzBuzz[counter] = String.valueOf(i);
+                    counter++;
                 }
             }
         } else{

@@ -22,18 +22,18 @@ public class FibonacciGenerator {
 
     // Method for generating and printing Fibonacci sequence
     public static void generateFibonacciSequence(int terms) {
-        int NUMBER_1 = 0; // First number for the fibonacci sequence
-        int NUMBER_2 = 1; // Second term for the fibonacci sequence
+        int number1 = 0; // First number for the fibonacci sequence
+        int number2 = 1; // Second term for the fibonacci sequence
 
         System.out.print("Fibonacci Sequence upto " + terms + " terms is: ");
 
         // Loop for printing the sequence upto n therms
         for(int i=1; i<=terms; i++) {
-            System.out.print(NUMBER_1 + " ");
+            System.out.print(number1 + " ");
 
-            int next = NUMBER_1 + NUMBER_2; // Calculating the next term in the sequence
-            NUMBER_1 = NUMBER_2;
-            NUMBER_2 = next;
+            int next = number1 + number2; // Calculating the next term in the sequence
+            number1 = number2;
+            number2 = next;
         }
     }
 }

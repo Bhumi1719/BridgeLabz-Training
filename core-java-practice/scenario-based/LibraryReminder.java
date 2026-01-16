@@ -6,8 +6,8 @@ public class LibraryReminder {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int TOTAL_FINE = 0; // Variable for storing the total fine calculated 
-        int FINE_PER_DAY = 5; // Variable for storing the fine calculated for each late day
+        final int FINE_PER_DAY = 5; // Variable for storing the fine calculated for each late day
+        int totalFine = 0; // Variable for storing the total fine calculated 
 
         // Loop for calculating fine for 5 days if returned late
         for(int i=1; i<=5; i++) {
@@ -25,7 +25,7 @@ public class LibraryReminder {
             // Condition for returning the book late
             if(lateDays > 0) {
                 int fine = (int) lateDays * FINE_PER_DAY; // Calculating fine for each late days
-                TOTAL_FINE += fine; // Calculating the total fine for late days
+                totalFine += fine; // Calculating the total fine for late days
 
                 System.out.println("\nLate by " + lateDays + " days");
                 System.out.println("YOur fine till date is INR " + fine);
@@ -36,6 +36,6 @@ public class LibraryReminder {
         }
 
         // Displaying total fine for all books
-        System.out.println("\nTotal Fine for 5 books is INR " + TOTAL_FINE);
+        System.out.println("\nTotal Fine for 5 books is INR " + totalFine);
     }
 }

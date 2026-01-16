@@ -17,9 +17,9 @@ public class EmployeeSalary {
         // Declaring array to store salary after the bonus
         double[] newSalary = new double[10];
 
-        double TOTAL_BONUS = 0.0;
-        double TOTAL_OLD_SALARY = 0.0;
-        double TOTAL_NEW_SALARY = 0.0;
+        double totalBonus = 0.0;
+        double totalOldSalary = 0.0;
+        double totalNewSalary = 0.0;
 
         // Loop for taking input for 10 employees
         for (int i=0; i<10; i++) {
@@ -46,13 +46,13 @@ public class EmployeeSalary {
 
             newSalary[i] = salary[i] + bonus[i];
 
-            TOTAL_BONUS += bonus[i];
-            TOTAL_OLD_SALARY += salary[i];
-            TOTAL_NEW_SALARY += newSalary[i];
+            totalBonus += bonus[i];
+            totalOldSalary += salary[i];
+            totalNewSalary += newSalary[i];
         }
 
-        System.out.println("Total Bonus Payout = " + TOTAL_BONUS);
-        System.out.println("Total Old Salary = " + TOTAL_OLD_SALARY);
-        System.out.println("Total New Salary = " + TOTAL_NEW_SALARY);
+        System.out.println("Total Bonus Payout = " + totalBonus);
+        System.out.println("Total Old Salary = " + totalOldSalary);
+        System.out.println("Total New Salary = " + totalNewSalary);
     }
 }

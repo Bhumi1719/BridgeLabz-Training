@@ -22,16 +22,16 @@ public class MaximumOfThreeNumber {
 
     // Method for finding the maximum of three numbers
     public static int findMaximumNumber(int number1, int number2, int number3) {
-        int MAXIMUM = number1; // Variable for storing the maximum number initialized with first number
+        int max = number1; // Variable for storing the maximum number initialized with first number
 
-        if(number2 > MAXIMUM) { // If second number is greater
-            MAXIMUM = number2;
+        if(number2 > max) { // If second number is greater
+            max = number2;
         }
 
-        if(number3 > MAXIMUM) { // IF third is greater
-            MAXIMUM = number3;
+        if(number3 > max) { // IF third is greater
+            max = number3;
         }
 
-        return MAXIMUM; // Returning the maximum
+        return max; // Returning the maximum
     }
 }

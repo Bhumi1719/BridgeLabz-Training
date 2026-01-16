@@ -8,14 +8,14 @@ public class CoffeeCounterChronicles {
         System.out.print("Enter the number of customers: ");
         int customer = sc.nextInt();
 
-        double GST = 0.15;
+        final double GST = 0.15;
 
         // Taking counter variable and initializing it 1 to keep track of number of customers
-        int COUNTER = 1;
+        int counter = 1;
 
         // Using while loop to keep track of the customers and taking the order for each customer. As soon as the counter becomes greater than the customer count the loop terminates
-        while(COUNTER <= customer) {
-            System.out.println("Take the order for customer " + COUNTER);
+        while(counter <= customer) {
+            System.out.println("Take the order for customer " + counter);
 
             // Taking coffee type order from the customer
             System.out.print("Enter the type of coffee (Espresso/Latte/Cappuccino or exit to stop):");
@@ -63,7 +63,7 @@ public class CoffeeCounterChronicles {
             System.out.println("Your order amount is INR " + total);
             System.out.println("GST included is INR " + gst);
             System.out.println("The total bill to be paid is INR " + totalBill);
-            COUNTER++;
+            counter++;
         }
     }
 }

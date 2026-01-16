@@ -8,7 +8,7 @@ public class MeanHeight {
         double[] height = new double[11];
 
         // Taking variable sum to keep track of the sum of elements
-        int SUM = 0;
+        int sum = 0;
 
         System.out.print("Enter the height of the players: ");
         // Taking user input of heights 
@@ -18,11 +18,11 @@ public class MeanHeight {
 
         // Finding and storing the sum of all elements
         for(int i=0; i<height.length; i++){
-            SUM += height[i];
+            sum += height[i];
         }
 
         // Finding the mean of heights of all players
-        double mean = SUM / 11;
+        double mean = sum / 11;
         System.out.println("Mean height of the football team is " + mean);
     }
 }

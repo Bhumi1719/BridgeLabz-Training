@@ -37,12 +37,12 @@ public class BmiMulti {
             // Determining weight status of each person
             if (person[i][2] < 18.5) {
                 status[i] = "Underweight";
-            } else if (person[i][2] >= 18.5 && bmi[i] < 25) {
+            } else if (person[i][2] >= 18.5 && person[i][2] < 25) {
                 status[i] = "Normal";
-            } else if (person[i][2] >= 25 && bmi[i] < 40){
+            } else if (person[i][2] >= 25 && person[i][2] < 40){
                 status[i] = "Overweight";
             } else {
-                status[i] = "Obese"
+                status[i] = "Obese";
             }
         }
 

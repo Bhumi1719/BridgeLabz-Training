@@ -9,11 +9,11 @@ public class MayaBMI {
         int client = sc.nextInt(); 
         
         // Initializing counter variable to keep track of number of clients
-        int COUNTER = 1;
+        int counter = 1;
 
         // Here we are using while loop to track the number of clients and for each client taking his/her weight and height. As soon as counter value becomes greater than client the loop will terminate
-        while(COUNTER <= client) {
-            System.out.println("\nEnter the details of for client " + COUNTER + ":");
+        while(counter <= client) {
+            System.out.println("\nEnter the details of for client " + counter + ":");
             
             System.out.print("Enter weight in kilograms: ");
             double weight = sc.nextDouble();
@@ -38,7 +38,7 @@ public class MayaBMI {
             } else {
                 System.out.println(" and you are Obese");
             }
-            COUNTER++; // Incrementing counter each time his/her BMI is calculated
+            counter++; // Incrementing counter each time his/her BMI is calculated
         }
     }
 }

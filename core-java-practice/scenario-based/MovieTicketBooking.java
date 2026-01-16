@@ -9,28 +9,28 @@ public class MovieTicketBooking {
             System.out.print("\nEnter the type of movie you want to see (Horror/Romantic/Comedy/Action/Drama): ");
             String movie = sc.next().toLowerCase();
 
-            int TOTAL = 0; // Variable to store the total price customer has to pay
+            int total = 0; // Variable to store the total price customer has to pay
 
             // Switch case for movie type
             switch(movie) {
                 case "romantic" :
-                    TOTAL += 180;
+                    total += 180;
                     break;
 
                 case "horror" :
-                    TOTAL += 200;
+                    total += 200;
                     break;
 
                 case "comedy" :
-                    TOTAL += 150;
+                    total += 150;
                     break;
 
                 case  "action" :
-                    TOTAL += 220;
+                    total += 220;
                     break;
 
                 case "drama" :
-                    TOTAL += 160;
+                    total += 160;
                     break;
 
                 default :
@@ -43,9 +43,9 @@ public class MovieTicketBooking {
 
             // Conditionals for differnet seat type
             if(seat.equals("gold")) {
-                TOTAL += 250;
+                total += 250;
             } else if(seat.equals("silver")) {
-                TOTAL += 200;
+                total += 200;
             } else {
                 System.out.println("Enter a valid seat type");
                 continue; // To enter the seat type again
@@ -65,19 +65,19 @@ public class MovieTicketBooking {
 
                 switch(snack) { // Switch case for different types of snacks
                     case "popcorn" : 
-                        TOTAL += 50; 
+                        total += 50; 
                         break;
 
                     case "soda" : 
-                        TOTAL += 30; 
+                        total += 30; 
                         break;
 
                     case "burger" : 
-                        TOTAL += 80;
+                        total += 80;
                         break;
 
                     case "combo" : 
-                        TOTAL += 120; 
+                        total += 120; 
                         break;
                     default : 
                         System.out.println("Invalid snack type"); 
@@ -85,9 +85,9 @@ public class MovieTicketBooking {
                 }
             }
 
-            TOTAL *= tickets; // Storing the total price as per tickets
+            total *= tickets; // Storing the total price as per tickets
 
-            System.out.println("\nYour Total Ticket Price is INR " + TOTAL);
+            System.out.println("\nYour Total Ticket Price is INR " + total);
 
             // Taking user input for next customer if present
             System.out.print("\nDo you want to process next customer (yes / no)? ");

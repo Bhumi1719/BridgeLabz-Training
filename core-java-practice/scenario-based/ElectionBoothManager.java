@@ -5,11 +5,11 @@ public class ElectionBoothManager {
         Scanner sc = new Scanner(System.in);
 
         // Initializing 0 votes for 1
-        int VOTE1 = 0;
+        int vote1 = 0;
         // Initializing 0 votes for 2
-        int VOTE2 = 0;
+        int vote2 = 0;
         // Initializing 0 votes for 3
-        int VOTE3 = 0;
+        int vote3 = 0;
 
         // Running an infinite loop for multiple voters which ends when special character is entered
         while(true) {
@@ -26,11 +26,11 @@ public class ElectionBoothManager {
 
                 // Conditionals for counting number of votes
                 if(vote == 1) {
-                    VOTE1 ++;
+                    vote1 ++;
                 } else if(vote == 2) {
-                    VOTE2 ++;
+                    vote2 ++;
                 } else if(vote == 3) {
-                    VOTE3 ++;
+                    vote3 ++;
                 } else {
                     System.out.println("Give proper vote");
                 }
@@ -40,8 +40,8 @@ public class ElectionBoothManager {
         }
 
         System.out.println("\nResult of Elections are: ");
-        System.out.println("Total votes given to 1 candidate: " + VOTE1);
-        System.out.println("Total votes given to 2 candidate: " + VOTE2);
-        System.out.println("Total votes given to 3 candidate: " + VOTE3);
+        System.out.println("Total votes given to 1 candidate: " + vote1);
+        System.out.println("Total votes given to 2 candidate: " + vote2);
+        System.out.println("Total votes given to 3 candidate: " + vote3);
     } 
 }

@@ -1,8 +1,18 @@
-import java.util.Arrays;
+import java.util.*;
 
-public class move_zeroes {
+public class MoveZeroes {
     public static void main(String[] args) {
-        int[] arr = {0, 1, 0, 3, 12}; 
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the number of elements: ");
+        int size = sc.nextInt();
+
+        int[] arr = new int[size];
+        
+        System.out.println("Enter the elements of the array: ");
+        for(int i=0; i<size; i++){
+            arr[i] = sc.nextInt();
+        }
 
 	//Sort the array  
         Arrays.sort(arr);

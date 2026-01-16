@@ -7,28 +7,28 @@ public class Reverse {
         System.out.print("Enter the number: ");
         int number = sc.nextInt();
 
-        int TEMP = number;
-        int COUNT = 0;
+        int temp = number;
+        int count = 0;
 
         // Loop for finding count of the digits in number
-        while (TEMP != 0) {
-            COUNT ++;
-            TEMP /= 10;
+        while (temp != 0) {
+            count ++;
+            temp /= 10;
         }
 
         // Declaring array to store digit of number
-        int[] digits = new int[COUNT];
+        int[] digits = new int[count];
 
         // Storing digits in array
-        TEMP = number;
-        for (int i=0; i<COUNT; i++) {
-            digits[i] = TEMP % 10;
-            TEMP /= 10;
+        temp = number;
+        for (int i=0; i<count; i++) {
+            digits[i] = temp % 10;
+            temp /= 10;
         }
 
         // Loop to display reversed number
         System.out.print("Reversed number is ");
-        for (int i=0; i<COUNT; i++) {
+        for (int i=0; i<count; i++) {
             System.out.print(digits[i]);
         }
     }

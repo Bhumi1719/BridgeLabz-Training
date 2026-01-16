@@ -17,16 +17,16 @@ public class PalindromeChecker {
 
     // Method for checking whether the string is a palindrome or not
     public static boolean isPalindrome(String name) {
-        int START = 0; // Counter variable to keep track of the lenght of the string from the starting
-        int END = name.length() - 1; // Counter variable to keep track of the length of the string from the ending
+        int start = 0; // Counter variable to keep track of the lenght of the string from the starting
+        int end = name.length() - 1; // Counter variable to keep track of the length of the string from the ending
  
         // Loop for checking the string to be palindrome or not
-        while(START < END) {
-            if(name.charAt(START) != name.charAt(END)) { // If the character from start is not equal to character from end then return false
+        while(start < end) {
+            if(name.charAt(start) != name.charAt(end)) { // If the character from start is not equal to character from end then return false
                 return false;
             }
-            START ++; // Increamenting the counter from start
-            END --; // Decreamenting the counter form end
+            start ++; // Increamenting the counter from start
+            end --; // Decreamenting the counter form end
         }
 
         return true; // Else return true

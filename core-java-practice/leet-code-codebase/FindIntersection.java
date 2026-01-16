@@ -1,5 +1,5 @@
 import java.util.*;
-public class inter {
+public class FindIntersection {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 	// Takes input

@@ -16,7 +16,7 @@ public class MultidimensionalArray {
         int[] arr = new int[rows*cols];
 
         // Initializing index to 0 for 1D array to copy elements
-        int INDEX = 0;
+        int index = 0;
 
         // Declaring 2D array of size row and column
         int[][] multiArray = new int[rows][cols];
@@ -32,8 +32,8 @@ public class MultidimensionalArray {
         // Uding two for loops for copying elements of 2D array into 1D array
         for(int i=0; i<rows; i++){
             for(int j=0; j<cols; j++){
-                arr[INDEX] = multiArray[i][j];
-                INDEX ++; // Increamenting index by 1
+                arr[index] = multiArray[i][j];
+                index ++; // Increamenting index by 1
             }
         }
 

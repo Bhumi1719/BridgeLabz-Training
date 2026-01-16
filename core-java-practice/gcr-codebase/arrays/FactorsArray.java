@@ -8,14 +8,14 @@ public class FactorsArray {
         int number = sc.nextInt();
 
         // Variable to store the max size of array
-        int MAX_FACTOR = 10;
+        int maxFactor = 10;
 
         // Declaring an array to store the factors of the number
-        int[] factors = new int[MAX_FACTOR];
+        int[] factors = new int[maxFactor];
 
 
         // Counter to keep track of index of the array
-        int INDEX = 0;
+        int index = 0;
 
         if(number > 0){
             // For loop for finding the factors of the number
@@ -23,9 +23,9 @@ public class FactorsArray {
                 if (number % i == 0) {
 
                     // If array is full, increase its size
-                    if (INDEX == MAX_FACTOR) {
-                        MAX_FACTOR = MAX_FACTOR * 2;
-                        int[] temp = new int[MAX_FACTOR];
+                    if (index == maxFactor) {
+                        maxFactor = maxFactor * 2;
+                        int[] temp = new int[maxFactor];
 
                         for (int j=0; j <factors.length; j++) { // If array gets full then copying the elements of factor array to new array of more size
                             temp[j] = factors[j];
@@ -34,14 +34,14 @@ public class FactorsArray {
                     }
 
                     // Adding the factors of the number to the array
-                    factors[INDEX] = i;
-                    INDEX ++; // Increamenting the index to add element to the next index of array
+                    factors[index] = i;
+                    index++; // Increamenting the index to add element to the next index of array
                 }
             }
 
             // Loop for printing the array of factors
             System.out.println("Factors of " + number + " are: ");
-            for (int i= 0; i <INDEX; i++) {
+            for (int i= 0; i <index; i++) {
                 System.out.println(factors[i]);
             }
 
