@@ -160,7 +160,7 @@ BridgeLabz-Training/
 
 		🔐 Access modifiers → 📂 gcr-codebase/access-modifiers
 
-### 📅 1 Dec 2025 (Thursday)
+### 📅 1 Jan 2026 (Thursday)
 
 	✨ Revised static, final, this keyword
 	→ 📂 Pushed to: gcr-codebase/keywords
@@ -168,7 +168,7 @@ BridgeLabz-Training/
 	🧠 Solved 2 scenario-based problems
 	→ 📂 Pushed to: oops-practice/scenario-based
 
-### 📅 2 Dec 2025 (Friday)
+### 📅 2 Jan 2026 (Friday)
 
 	📊 Studied UML diagrams
 
@@ -178,7 +178,7 @@ BridgeLabz-Training/
 	🧠 Solved 2 scenario-based problems
 	→ 📂 Pushed to: oops-practice/scenario-based
 
-### 📅 3 Dec 2025 (Saturday)
+### 📅 3 Jan 2026 (Saturday)
 
 	🧬 Learned inheritance
 
@@ -224,7 +224,7 @@ BridgeLabz-Training/
 
 # 🗓️ WEEK 4 – OOP Pillars, LeetCode & DSA
 
-### 📅 5 Dec 2025 (Monday)
+### 📅 5 Jan 2026 (Monday)
 
 	🧱 Revised four pillars of OOP
 
@@ -234,7 +234,7 @@ BridgeLabz-Training/
 	🧠 Solved 3 scenario-based problems
 	→ 📂 Pushed to: oops-practice/scenario-based
 
-### 📅 6 Dec 2025 (Tuesday)
+### 📅 6 Jan 2026 (Tuesday)
 
 	🧩 Completed OOP pillar problems
 	→ 📂 Pushed to: gcr-codebase/oop-pillars
@@ -245,7 +245,7 @@ BridgeLabz-Training/
 	🧠 Solved 4 scenario-based problems
 	→ 📂 Pushed to: oops-practice/scenario-based
 
-### 📅 7 Dec 2025 (Wednesday)
+### 📅 7 Jan 2026 (Wednesday)
 
 	🧠 Solved 2 scenario-based OOP questions
 	→ 📂 Pushed to: oops-practice/scenario-based
@@ -255,7 +255,7 @@ BridgeLabz-Training/
 
 	🔗 Revised linked lists
 
-### 📅 8 Dec 2025 (Thursday)
+### 📅 8 Jan 2026 (Thursday)
 
 	🧩 Implemented singly, doubly, circular linked lists
 
@@ -265,7 +265,7 @@ BridgeLabz-Training/
 	🧠 Solved 2 LeetCode string problems – Roman to Integer & Longest Common Prefix
 	→ 📂 Pushed to: dsa-practice/leet-code-codebase
 
-### 📅 9 Dec 2025 (Friday)
+### 📅 9 Jan 2026 (Friday)
 
 	🧠 Solved 2 LeetCode problems – Plus One and Search Insert Position
   	→ 📂 Pushed to: dsa-practice/leet-code-codebase
@@ -273,7 +273,7 @@ BridgeLabz-Training/
 	🧩 Solved 3 scenario-based questions
   	→ 📂 Pushed to: oops-practice/scenario-based
 
-### 📅 11 Dec 2025 (Sunday)
+### 📅 11 Jan 2026 (Sunday)
 
  	🧠 Solved 2 LeetCode problems – Single Number and Buy and Sell Stocks
  	→ 📂 Pushed to: dsa-practice/leet-code-codebase
@@ -283,7 +283,7 @@ BridgeLabz-Training/
 
 # 🗓️ WEEK 5 – DSA, HashMap, LeetCode & Git Merging
 
-### 📅 12 Dec 2025 (Monday)
+### 📅 12 Jan 2026 (Monday)
 
 	🧠 Solved 7 scenario-based questions
 	→ 📂 Pushed to: oops-practice/scenario-based
@@ -291,7 +291,7 @@ BridgeLabz-Training/
 	🧩 Solved 2 LeetCode problems – Integer to Roman and Reverse Integer
 	→ 📂 Pushed to: dsa-practice/leet-code-codebase
 
-### 📅 13 Dec 2025 (Tuesday)
+### 📅 13 Jan 2026 (Tuesday)
 
 	🧠 Solved 3 DSA scenario-based questions
 	→ 📂 Pushed to: dsa-practice/scenario-based
@@ -304,7 +304,7 @@ BridgeLabz-Training/
 
 	⚔️ Learned how to merge branches and solve conflict
 
-### ✨ 14 Dec 2025 (Wednesday)
+### 📅 14 Jan 2026 (Wednesday)
 
 	🗂️ Solved 1 HashMap question
 	→ 📂 Pushed to: dsa-practice/gcr-codebase/hashmap
@@ -313,4 +313,12 @@ BridgeLabz-Training/
 	→ 📂 Pushed to: dsa-practice/gcr-codebase/queue
 
 	🧩 Solved 2 LeetCode problems – Generate Parenthesis and Valid Parentheses
+	→ 📂 Pushed to: dsa-practice/leet-code-codebase
+
+### 📅 15 Jan 2026 (Thursday)
+
+	🗂️ Solved problems on Sorting Algorithms  
+	→ 📂 Pushed to: dsa-practice/gcr-codebase/sorting  
+
+	🧩 Solved 2 LeetCode problems – Power of Two and Square Root of a Number  
 	→ 📂 Pushed to: dsa-practice/leet-code-codebase
