@@ -86,7 +86,7 @@ public class CreateContact {
     }
 
 	void displayInfo() {
-        System.out.println("\nContacts List");
+        System.out.println("\n===Contacts List===");
 		System.out.println("Name : " + firstName + " " + lastName);
 		System.out.println("Address : " + address);
 		System.out.println("City : " + city);
