@@ -322,3 +322,8 @@ BridgeLabz-Training/
 
 	🧩 Solved 2 LeetCode problems – Power of Two and Square Root of a Number  
 	→ 📂 Pushed to: dsa-practice/leet-code-codebase
+
+### 📅 16 Jan 2026 (Friday) 
+
+	🧩 Solved 2 LeetCode problems – Reverse Words and Rotate array  
+	→ 📂 Pushed to: dsa-practice/leet-code-codebase
