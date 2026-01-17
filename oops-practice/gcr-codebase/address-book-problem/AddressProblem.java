@@ -56,6 +56,16 @@ public class AddressProblem {
 					break;
 					
 				case 3 :
+					System.out.print("Enter the first name: ");
+					String searchFirstName = sc.nextLine();
+					
+					System.out.print("Enter the last name: ");
+					String searchLastName = sc.nextLine();
+					
+					contact.editContact(searchFirstName, searchLastName, sc);
+					break;
+					
+				case 4 :
 					System.out.println("Exited");
 					System.exit(0);
 					
