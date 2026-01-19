@@ -52,4 +52,21 @@ public class Contacts {
 			System.out.println("No contact found");
 		}
 	}
+
+	void deleteContact(String firstName, String lastName) {
+		boolean found = false;
+		
+		for(int i=0; i<contacts.size(); i++) {
+			CreateContact c = contacts.get(i);
+			if(c.getFirstName().equalsIgnoreCase(firstName) && c.getLastName().equalsIgnoreCase(lastName)) {
+				contacts.remove(i);
+				found = true;
+			}
+		}
+		if(found) {
+			System.out.print("Contact deleted successfully");
+		} else {
+			System.out.println("Contact not found");
+		}
+	}
 }

@@ -13,7 +13,9 @@ public class AddressProblem {
 		while(true) {
 			System.out.println("\n1. Add Contact");
 			System.out.println("2. Display Contact");
-			System.out.println("3. Exit");
+			System.out.println("3. Edit Contact");
+			System.out.println("4. Delete Contact");
+			System.out.println("5. Exit");
 			
 			System.out.print("\nEnter your choice: ");
 			int choice = sc.nextInt();
@@ -66,6 +68,16 @@ public class AddressProblem {
 					break;
 					
 				case 4 :
+					System.out.print("Enter the fisrt name: ");
+					searchFirstName = sc.nextLine();
+					
+					System.out.print("Enter the last name: ");
+					searchLastName = sc.nextLine();
+					
+					contact.deleteContact(searchFirstName, searchLastName);
+					break;
+					
+				case 5 :
 					System.out.println("Exited");
 					System.exit(0);
 					
