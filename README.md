@@ -327,3 +327,25 @@ BridgeLabz-Training/
 
 	🧩 Solved 2 LeetCode problems – Reverse Words and Rotate array  
 	→ 📂 Pushed to: dsa-practice/leet-code-codebase
+
+### 📅 17 Jan 2026 (Saturday) 
+
+	🗂️ Solved problems on String Handling, File Handling, Linear and Binary Search  
+	→ 📂 Pushed to: dsa-practice/gcr-codebase/string-builder-buffer folder
+
+	📚 Solved 3 usde cases of the Address Book Problem
+	→ 📂 Pushed to: oops-practice/gcr-codebase/address-book-problem
+
+	🧩 Solved 2 LeetCode problems – Excel Sheet Title and Excel Sheet Number  
+	→ 📂 Pushed to: dsa-practice/leet-code-codebase
+
+
+# 🗓️ WEEK 6 – Address Book Problem
+
+### 📅 19 Jan 2026 (Monday)
+
+	🗂️ Solved 2 leetcode problems - Lemonade Change and String Matching in Array  
+	→ 📂 Pushed to: dsa-practice/leet-code-codebase
+
+	📚 Solved 1 usde case of the Address Book Problem
+	→ 📂 Pushed to: oops-practice/gcr-codebase/address-book-problem
