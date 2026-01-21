@@ -349,3 +349,14 @@ BridgeLabz-Training/
 
 	📚 Solved 1 usde case of the Address Book Problem
 	→ 📂 Pushed to: oops-practice/gcr-codebase/address-book-problem
+
+### 📅 20 Jan 2026(Tuesday)
+
+	🗂️ Solved 2 leetcode problems - Count and Say and Multiply Strings  
+	→ 📂 Pushed to: dsa-practice/leet-code-codebase
+
+	📚 Solved scenario-based problem
+	→ 📂 Pushed to: dsa-practice/scenario-based
+
+	📚 Solved Big-O notation problems
+	→ 📂 Pushed to: dsa-practice/gcr-codebase/big-o-notation
