@@ -139,17 +139,17 @@ public class AddressProblem {
 					viewPersonsByCity();
 					break;
 				
-				// UC-10: View Persons by State
+				// UC-9: View Persons by State
 				case 9:
 					viewPersonsByState();
 					break;
 
-				// UC-11: Count Persons by City
+				// UC-10: Count Persons by City
 				case 10:
 					countByCity();
 					break;
 
-				// UC-11: Count Persons by State
+				// UC-10: Count Persons by State
 				case 11:
 					countByState();
 					break;
