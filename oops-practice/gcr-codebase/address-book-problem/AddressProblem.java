@@ -4,6 +4,11 @@ public class AddressProblem {
 
 	static Scanner sc = new Scanner(System.in);
 	static Map<String, Contacts> addressBooks = new HashMap<>();
+
+	// UC-9: Maintain dictionaries for City → Persons and State → Persons
+	static Map<String, List<CreateContact>> cityDictionary = new HashMap<>();
+	static Map<String, List<CreateContact>> stateDictionary = new HashMap<>();
+
 	public static void main(String[] args) {
 		
 		System.out.println("Welcome to Address Book Program");
@@ -16,7 +21,9 @@ public class AddressProblem {
 			System.out.println("4. Edit Contact");
 			System.out.println("5. Delete Contact");
 			System.out.println("6. Search Contact by City or State");
-			System.out.println("7. Exit");
+			System.out.println("8. View Persons by City"); 
+			System.out.println("9. View Persons by State");  
+			System.out.println("10. Exit");
 			
 			System.out.print("\nEnter your choice: ");
 			int choice = sc.nextInt();
@@ -125,7 +132,17 @@ public class AddressProblem {
                     }
                     break;
 
-				case 7 :
+				// UC-9: View Persons by City
+				case 8:
+					viewPersonsByCity();
+					break;
+				
+				// UC-10: View Persons by State
+				case 9:
+					viewPersonsByState();
+					break;
+
+				case 10 :
 					System.out.println("Exited");
 					System.exit(0);
 					
@@ -191,5 +208,50 @@ public class AddressProblem {
             System.out.println("No contacts found in state: " + state);
         }
     }
+
+	// UC-9: Build dictionaries dynamically across all Address Books
+	private static void buildDictionaries() {
+		cityDictionary.clear();
+		stateDictionary.clear();
+
+		for(Contacts contacts : addressBooks.values()) {
+			for(CreateContact c : contacts.getAllContacts()) {
+				// Add to city dictionary
+				cityDictionary.putIfAbsent(c.getCity(), new ArrayList<>());
+				cityDictionary.get(c.getCity()).add(c);
+
+				// Add to state dictionary
+				stateDictionary.putIfAbsent(c.getState(), new ArrayList<>());
+				stateDictionary.get(c.getState()).add(c);
+			}
+		}
+	}
+
+	// UC-9: View all persons by City
+	private static void viewPersonsByCity() {
+		buildDictionaries();
+		System.out.println("\n=== Persons by City ===");
+
+		for(Map.Entry<String, List<CreateContact>> entry : cityDictionary.entrySet()) {
+			System.out.println("City: " + entry.getKey());
+			for(CreateContact c : entry.getValue()) {
+				System.out.println(" - " + c.getFirstName() + " " + c.getLastName());
+			}
+		}
+	}
+
+	// UC-9: View all persons by State
+	private static void viewPersonsByState() {
+		buildDictionaries();
+		System.out.println("\n=== Persons by State ===");
+
+		for(Map.Entry<String, List<CreateContact>> entry : stateDictionary.entrySet()) {
+			System.out.println("State: " + entry.getKey());
+			for(CreateContact c : entry.getValue()) {
+				System.out.println(" - " + c.getFirstName() + " " + c.getLastName());
+			}
+		}
+	}
+
 
 }

@@ -103,4 +103,10 @@ public class Contacts {
         }
         return result;
     }
+
+	// Uc-9: Get All Contacts
+	List<CreateContact> getAllContacts() {
+		return new ArrayList<>(contacts); 
+	}
+
 }
