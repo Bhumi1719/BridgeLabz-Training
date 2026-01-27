@@ -323,6 +323,8 @@ BridgeLabz-Training/
 	🧩 Solved 2 LeetCode problems – Power of Two and Square Root of a Number  
 	→ 📂 Pushed to: dsa-practice/leet-code-codebase
 
+	⚔️ Learned about four layer architecture in Java
+
 ### 📅 16 Jan 2026 (Friday) 
 
 	🧩 Solved 2 LeetCode problems – Reverse Words and Rotate array  
@@ -333,30 +335,134 @@ BridgeLabz-Training/
 	🗂️ Solved problems on String Handling, File Handling, Linear and Binary Search  
 	→ 📂 Pushed to: dsa-practice/gcr-codebase/string-builder-buffer folder
 
-	📚 Solved 3 usde cases of the Address Book Problem
+	📚 Solved 3 use cases of the Address Book Problem
 	→ 📂 Pushed to: oops-practice/gcr-codebase/address-book-problem
 
 	🧩 Solved 2 LeetCode problems – Excel Sheet Title and Excel Sheet Number  
 	→ 📂 Pushed to: dsa-practice/leet-code-codebase
 
+📁 Current GitHub Folder Structure
+BridgeLabz-Training/
+|
++-- core-java-practice/(Branch & Folder Name)
+|   |
+|   +-- gcr-codebase/
+|   |   |
+|   |   +-- programming-elements/
+|   |   |
+|   |   +-- control-flow/
+|   |   |
+|   |   .
+|   |   .
+|   |
+|   +-- leet-code-codebase/
+|   |
+|   +-- scenario-based/
+|
++-- oops-practice/(Branch & Folder Name)
+|   |
+|   +-- gcr-codebase/
+|   |   |
+|   |   +-- class-object/
+|   |   |
+|   |   +-- constructors/
+|   |   |
+|   |   .
+|   |   .
+|   |
+|   +-- leet-code-codebase/
+|   |
+|   +-- scenario-based/
+|
++-- dsa-practice/(Branch & Folder Name)
+|   |
+|   +-- gcr-codebase/
+|   |   |
+|   |   +-- stack/
+|   |   |
+|   |   +-- linked-list/
+|   |   |
+|   |   .
+|   |   .
+|   |
+|   +-- leet-code-codebase/
+|   |
+|   +-- scenario-based/
+|
++-- README.md
 
-# 🗓️ WEEK 6 – Address Book Problem
+# 🗓️ WEEK 6 – Java Collections, Streams and Generics
 
 ### 📅 19 Jan 2026 (Monday)
 
-	🗂️ Solved 2 leetcode problems - Lemonade Change and String Matching in Array  
+	🧩 Solved 2 leetcode problems - Lemonade Change and String Matching in Array  
 	→ 📂 Pushed to: dsa-practice/leet-code-codebase
 
-	📚 Solved 1 usde case of the Address Book Problem
+	📚 Solved 1 use case of the Address Book Problem
 	→ 📂 Pushed to: oops-practice/gcr-codebase/address-book-problem
 
 ### 📅 20 Jan 2026(Tuesday)
 
-	🗂️ Solved 2 leetcode problems - Count and Say and Multiply Strings  
+	🧩 Solved 2 leetcode problems - Count and Say and Multiply Strings  
 	→ 📂 Pushed to: dsa-practice/leet-code-codebase
 
-	📚 Solved scenario-based problem
+	🗂️ Solved scenario-based problems
 	→ 📂 Pushed to: dsa-practice/scenario-based
 
 	📚 Solved Big-O notation problems
 	→ 📂 Pushed to: dsa-practice/gcr-codebase/big-o-notation
+
+### 📅 21 Jan 2026(Wednesday)
+
+	🧩 Solved 2 leetcode problems - Simplify Path and Word Pattern
+	→ 📂 Pushed to: collections-practice/leet-code-codebase
+
+	🗂️ Solved problems on Java Generics
+	→ 📂 Pushed to: collections-practice/gcr-codebase/generics
+
+	📚 Solved 1 scenario-based problem - Online examination System on Review Day
+	→ 📂 Pushed to: reviews
+
+### 📅 22 Jan 2026(Thursday)
+
+	🧩 Solved 2 leetcode problems - Power Of Three and Rotate Image  
+	→ 📂 Pushed to: collections-practice/leet-code-codebase
+
+	📚 Solved probelms related to Collection interface, i.e., list and set
+	→ 📂 Pushed to: collections-practice/gcr-codebase/collections
+
+	🗂️ Solved 2 scenario-based problems - Smart Checkout and EduResults
+	→ 📂 Pushed to: dsa-practice/scenario-based
+
+### 📅 25 Jan 2026(Sunday)
+
+	🧩 Solved 2 leetcode problems - Power of Four and Day of the Year
+	→ 📂 Pushed to: collections-practice/leet-code-codebase
+
+	📚 Solved problems based on Java Streams
+	→ 📂 Pushed to: collecctions-practice/gcr-codebase/streams
+
+	🗂️ Solved remaining problems on Collection Interface, i.e., map and queue
+	→ 📂 Pushed to: collections-practice/gcr-codebase/collections
+
+
+# 🗓️ WEEK 7 – Address Book Problem, JUnit and Regex
+
+### 📅 26 Jan 2026(Monday)
+
+	🧩 Solved 2 leetcode problems - Happy Number and Rectangle Area  
+	→ 📂 Pushed to: collections-practice/leet-code-codebase
+
+### 📅 27 Jan 2026(Tuesday)
+
+	🗂️ Solved questions on Exceptions 
+	→ 📂 Pushed to: collections-practice/gcr-codebase/exceptions
+
+	🧩 Solved 2 leetcode problems - Intersection of Two Arrays and Third Maximum Number  
+	→ 📂 Pushed to: collections-practice/leet-code-codebase
+
+	📚 Solved 1 scenario-based problem - Lexical Twist
+	→ 📂 Pushed to: collections-practice/scenario-based
+
+	🧠 Solved 5 use cases of Address Book Problem
+	→ 📂 Pushed to: oops-practice/gcr-codebase/address-book-problem
