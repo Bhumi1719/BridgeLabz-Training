@@ -7,10 +7,17 @@ public class Contacts {
 		contacts = new ArrayList<>();
 	}
 	
-	void addContact(CreateContact contact) {
-		contacts.add(contact);
-		System.out.println("Contact added successfully");
-	}
+	// UC 7 - Prevent Duplicate
+    void addContact(CreateContact contact) {
+
+        if(contacts.contains(contact)) {
+            System.out.println("Duplicate Contact Found. \nCannot Add.");
+            return;
+        }
+
+        contacts.add(contact);
+        System.out.println("Contact Added Successfully");
+    }
 	
 	void displayContact() {
 		if(contacts.isEmpty()) {

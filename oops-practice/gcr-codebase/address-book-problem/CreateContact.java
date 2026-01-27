@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class CreateContact {
 	private String firstName;
 	private String lastName;
@@ -83,6 +85,27 @@ public class CreateContact {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+	// UC 7 - Override equals
+    @Override
+    public boolean equals(Object obj) {
+        if(this == obj) {
+			return true;
+		}
+
+        if(obj == null || getClass() != obj.getClass()) {
+			return false;
+		}
+
+        CreateContact contact = (CreateContact) obj;
+        return firstName.equalsIgnoreCase(contact.firstName) && lastName.equalsIgnoreCase(contact.lastName);
+    }
+
+    // UC 7 - Override hashCode
+    @Override
+    public int hashCode() {
+        return Objects.hash(firstName.toLowerCase(), lastName.toLowerCase());
     }
 
 	void displayInfo() {
