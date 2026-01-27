@@ -8,19 +8,22 @@ public class AddressProblem {
 		
 		System.out.println("Welcome to Address Book Program");
 		
+		// UC-5 and UC-6: Adding multiple Contacts and Address Books
 		while(true) {
 			System.out.println("\n1. Add Address Book");
 			System.out.println("2. Add Contact");
 			System.out.println("3. Display Contact");
 			System.out.println("4. Edit Contact");
 			System.out.println("5. Delete Contact");
-			System.out.println("6. Exit");
+			System.out.println("6. Search Contact by City or State");
+			System.out.println("7. Exit");
 			
 			System.out.print("\nEnter your choice: ");
 			int choice = sc.nextInt();
 			sc.nextLine();
 
 			switch(choice) {
+				// UC-6: Add a new Address Book
 				case 1 :
 					System.out.print("Enter Address Book Name: ");
                     String bookName = sc.nextLine();
@@ -33,6 +36,7 @@ public class AddressProblem {
                     }
                     break;
 
+				// UC-1 & UC-4: Add a Contact to a selected Address Book
 				case 2 : 
 					Contacts contact = getAddressBook();
                     if(contact == null) break;
@@ -67,13 +71,15 @@ public class AddressProblem {
 					contact.addContact(contacts);
 					break;
 					
+				// UC-2 / UC-4: Display all contacts in selected Address Book
 				case 3 :
 					contact = getAddressBook();
                     if(contact != null) {
                         contact.displayContact();
                     }
                     break;
-					
+				
+				// UC-3: Edit existing contact in selected Address Book
 				case 4 :
 					contact = getAddressBook();
                     if (contact == null) break;
@@ -87,6 +93,7 @@ public class AddressProblem {
 					contact.editContact(searchFirstName, searchLastName, sc);
 					break;
 					
+				// UC-4: Delete existing contact in selected Address Book
 				case 5 :
 					contact = getAddressBook();
                     if (contact == null) break;
@@ -99,8 +106,26 @@ public class AddressProblem {
 					
 					contact.deleteContact(searchFirstName, searchLastName);
 					break;
-					
-				case 6 :
+				
+				// UC-8: Search by City/State across multiple Address Books
+                case 6:
+                    System.out.print("Search by City or State (C/S): ");
+                    String csChoice = sc.nextLine();
+
+                    if(csChoice.equalsIgnoreCase("C")) {
+                        System.out.print("Enter City Name: ");
+                        String cityName = sc.nextLine();
+                        searchByCity(cityName);
+                    } else if(csChoice.equalsIgnoreCase("S")) {
+                        System.out.print("Enter State Name: ");
+                        String stateName = sc.nextLine();
+                        searchByState(stateName);
+                    } else {
+                        System.out.println("Invalid choice");
+                    }
+                    break;
+
+				case 7 :
 					System.out.println("Exited");
 					System.exit(0);
 					
@@ -112,6 +137,7 @@ public class AddressProblem {
 		
 	}
 
+	// UC-5: Helper method to select Address Book
 	private static Contacts getAddressBook() {
         System.out.print("Enter Address Book Name: ");
         String name = sc.nextLine();
@@ -121,6 +147,49 @@ public class AddressProblem {
             System.out.println("Address Book not found");
         }
         return contact;
+    }
+
+	// UC-8: Search by City across all Address Books
+    private static void searchByCity(String city) {
+        boolean found = false;
+
+        for(Map.Entry<String, Contacts> entry : addressBooks.entrySet()) {
+            String bookName = entry.getKey();
+            Contacts contacts = entry.getValue();
+            List<CreateContact> results = contacts.getContactsByCity(city);
+
+            if(!results.isEmpty()) {
+                found = true;
+                System.out.println("\nAddress Book: " + bookName);
+                for(CreateContact c : results) {
+                    c.displayInfo();
+                }
+            }
+        }
+        if(!found) {
+            System.out.println("No contacts found in city: " + city);
+        }
+    }
+
+    // UC-8: Search by State across all Address Books
+    private static void searchByState(String state) {
+        boolean found = false;
+        for(Map.Entry<String, Contacts> entry : addressBooks.entrySet()) {
+            String bookName = entry.getKey();
+            Contacts contacts = entry.getValue();
+            List<CreateContact> results = contacts.getContactsByState(state);
+
+            if(!results.isEmpty()) {
+                found = true;
+                System.out.println("\nAddress Book: " + bookName);
+                for(CreateContact c : results) {
+                    c.displayInfo();
+                }
+            }
+        }
+        if(!found) {
+            System.out.println("No contacts found in state: " + state);
+        }
     }
 
 }

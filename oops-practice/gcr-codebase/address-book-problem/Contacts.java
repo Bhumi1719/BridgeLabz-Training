@@ -7,7 +7,7 @@ public class Contacts {
 		contacts = new ArrayList<>();
 	}
 	
-	// UC 7 - Prevent Duplicate
+	// UC-1/UC-7: Add Contact with Duplicate Check
     void addContact(CreateContact contact) {
 
         if(contacts.contains(contact)) {
@@ -19,6 +19,7 @@ public class Contacts {
         System.out.println("Contact Added Successfully");
     }
 	
+	// UC-2: Display Contacts
 	void displayContact() {
 		if(contacts.isEmpty()) {
 			System.out.println("No contacts found");
@@ -30,6 +31,7 @@ public class Contacts {
 		
 	}
 	
+	// UC-3: Edit Contact
 	void editContact(String firstName, String lastName, Scanner sc) {
 		boolean found = false;
 		for(int i=0; i<contacts.size(); i++) {
@@ -60,6 +62,7 @@ public class Contacts {
 		}
 	}
 
+	// UC-4: Delete Contact
 	void deleteContact(String firstName, String lastName) {
 		boolean found = false;
 		
@@ -76,4 +79,28 @@ public class Contacts {
 			System.out.println("Contact not found");
 		}
 	}
+
+	// UC-8: Search by City
+    List<CreateContact> getContactsByCity(String city) {
+        List<CreateContact> result = new ArrayList<>();
+
+        for(CreateContact c : contacts) {
+            if(c.getCity().equalsIgnoreCase(city)) {
+                result.add(c);
+            }
+        }
+        return result;
+    }
+
+    // UC-8: Search by State
+    List<CreateContact> getContactsByState(String state) {
+        List<CreateContact> result = new ArrayList<>();
+
+        for(CreateContact c : contacts) {
+            if(c.getState().equalsIgnoreCase(state)) {
+                result.add(c);
+            }
+        }
+        return result;
+    }
 }
