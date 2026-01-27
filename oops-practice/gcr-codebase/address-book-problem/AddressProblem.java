@@ -23,7 +23,9 @@ public class AddressProblem {
 			System.out.println("6. Search Contact by City or State");
 			System.out.println("8. View Persons by City"); 
 			System.out.println("9. View Persons by State");  
-			System.out.println("10. Exit");
+			System.out.println("10. Count Persons by City");
+			System.out.println("11. Count Persons by State");  
+			System.out.println("12. Exit");
 			
 			System.out.print("\nEnter your choice: ");
 			int choice = sc.nextInt();
@@ -142,7 +144,17 @@ public class AddressProblem {
 					viewPersonsByState();
 					break;
 
-				case 10 :
+				// UC-11: Count Persons by City
+				case 10:
+					countByCity();
+					break;
+
+				// UC-11: Count Persons by State
+				case 11:
+					countByState();
+					break;
+
+				case 12 :
 					System.out.println("Exited");
 					System.exit(0);
 					
@@ -253,5 +265,24 @@ public class AddressProblem {
 		}
 	}
 
+	// UC-10: Count number of persons by City
+	private static void countByCity() {
+		buildDictionaries(); // UC-9
+		System.out.println("\n=== Count of Persons by City ===");
+
+		for(Map.Entry<String, List<CreateContact>> entry : cityDictionary.entrySet()) {
+			System.out.println("City: " + entry.getKey() + " | Count: " + entry.getValue().size());
+		}
+	}
+
+	// UC-10: Count number of persons by State
+	private static void countByState() {
+		buildDictionaries(); // UC-9
+		System.out.println("\n=== Count of Persons by State ===");
+
+		for(Map.Entry<String, List<CreateContact>> entry : stateDictionary.entrySet()) {
+			System.out.println("State: " + entry.getKey() + " | Count: " + entry.getValue().size());
+		}
+	}
 
 }
