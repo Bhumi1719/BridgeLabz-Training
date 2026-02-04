@@ -466,3 +466,137 @@ BridgeLabz-Training/
 
 	🧠 Solved 5 use cases of Address Book Problem
 	→ 📂 Pushed to: oops-practice/gcr-codebase/address-book-problem
+
+### 📅 28 Jan 2026 (Wednesday)
+
+	🧩 Solved 2 LeetCode problems – IslandPerimeter and IntersectionOfTwoArrays2
+	→ 📂 Pushed to: collection-practice/leet-code-codebase
+
+	🧠 Solved 3 scenario-based problems - FlipKey, RestaurantTableReservation and FileBackUp
+	→ 📂 Pushed to: collection-practice/scenario-based
+
+### 📅 29 Jan 2026 (Thursday)
+
+	📚 Solved problems on Regex
+	→ 📂 Pushed to: collection-practice/gcr-codebase
+
+	🧩 Solved 2 LeetCode problems – NumberToHexaDecimal and FindTheDifference
+	→ 📂 Pushed to: collection-practice/leet-code-codebase
+
+### 📅 30 Jan 2026 (Friday)
+
+	🧩 Solved 2 LeetCode problems – UglyNumber and AddDigits
+	→ 📂 Pushed to: collection-practice/leet-code-codebase
+
+	🧠 Solved 1 scenario-based problem - FutureLogistics
+	→ 📂 Pushed to: collection-practice/scenario-based
+
+
+### 📅 31 Jan 2026 (Saturday)
+
+	📚 Solved problems on JUNIT and understood its working 
+	→ 📂 Pushed to: collection-practice/gcr-codebase
+
+	🧩 Solved 2 LeetCode problems – DetectCapital and KeyBoardRow
+	→ 📂 Pushed to: collection-practice/leet-code-codebase
+
+📁 Current GitHub Folder Structure
+BridgeLabz-Training/
+|
++-- core-java-practice/(Branch & Folder Name)
+|   |
+|   +-- gcr-codebase/
+|   |   |
+|   |   +-- programming-elements/
+|   |   |
+|   |   +-- control-flow/
+|   |   |
+|   |   .
+|   |   .
+|   |
+|   +-- leet-code-codebase/
+|   |
+|   +-- scenario-based/
+|
++-- oops-practice/(Branch & Folder Name)
+|   |
+|   +-- gcr-codebase/
+|   |   |
+|   |   +-- class-object/
+|   |   |
+|   |   +-- constructors/
+|   |   |
+|   |   .
+|   |   .
+|   |
+|   +-- leet-code-codebase/
+|   |
+|   +-- scenario-based/
+|
++-- dsa-practice/(Branch & Folder Name)
+|   |
+|   +-- gcr-codebase/
+|   |   |
+|   |   +-- stack/
+|   |   |
+|   |   +-- linked-list/
+|   |   |
+|   |   .
+|   |   .
+|   |
+|   +-- leet-code-codebase/
+|   |
+|   +-- scenario-based/
+|
++-- collection-practice/(Branch & Folder Name)
+|   |
+|   +-- gcr-codebase/
+|   |   |
+|   |   +-- regex/
+|   |   |
+|   |   +-- annotations/
+|   |   |
+|   |   .
+|   |   .
+|   |
+|   +-- leet-code-codebase/
+|   |
+|   +-- scenario-based/
+|
++-- README.md
+
+
+# 🗓️ WEEK 8 – IO Programming, Java-8 Features
+
+### 📅 2 Feb 2026 (Monday)
+
+	📚 Solved problems on Annotations and Reflections
+	→ 📂 Pushed to: collection-practice/gcr-codebase
+
+	🧩 Solved 2 LeetCode problems – MostCommonWord and CanPlaceFlowers
+	→ 📂 Pushed to: collection-practice/leet-code-codebase
+
+	🧠 Solved problems on CSV-Handling and strengthened IO Programming Concepts
+	→ 📂 Pushed to: collection-practice/gcr-codebase
+
+### 📅 3 Feb 2026 (Tuesday)
+
+	📚 Completed 1 scenario-based problem - FactoryRobotHazardAnalyzer
+	→ 📂 Pushed to: dsa-practice/scenario-based
+
+	🧩 Solved 2 LeetCode problems – ArrangingCoins and NimGame
+	→ 📂 Pushed to: collection-practice/leet-code-codebase
+
+	🧠 Solved 2 scenario-based problems - AeroVigil and StreamBuzz
+	→ 📂 Pushed to: collection-practice/scenario-based
+
+### 📅 4 Feb 2026 (Wednesday)
+
+	📚 Created a new branch java-8-features-practice completed problems on Lambda Expressions and Functional Interfaces
+	→ 📂 Pushed to: java-8-features-practice/gcr-codebase
+
+	🧩 Solved 2 LeetCode problems – Base7 and ConstructRectangle
+	→ 📂 Pushed to: java-8-features-practice/leet-code-codebase
+
+	🧠 Solved problems on the topic JSON Data
+	→ 📂 Pushed to: collection-practice/gcr-codebase
