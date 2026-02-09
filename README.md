@@ -600,3 +600,37 @@ BridgeLabz-Training/
 
 	🧠 Solved problems on the topic JSON Data
 	→ 📂 Pushed to: collection-practice/gcr-codebase
+
+### 📅 5 Feb 2026 (Thursday)
+
+	📚 Solved problems on Stream-API
+	→ 📂 Pushed to: java-8-features-practice/gcr-codebase
+
+	🧩 Solved 2 LeetCode problems – SelfDividingNumbers and SmallestRange1
+	→ 📂 Pushed to: java-8-features-practice/leet-code-codebase
+
+	🧠 Solved problems on the topic Collectors
+	→ 📂 Pushed to: java-8-features-practice/gcr-codebase
+
+### 📅 6 Feb 2026 (Friday)
+
+	📚 Attended Soft Skill session by BridgeLabz
+
+	🧠 Solved 4 scenario-based problems
+	→ 📂 Pushed to: dsa-practice/scenario-based
+
+### 📅 7 Feb 2026 (Saturday)
+
+	🧩 Solved 2 LeetCode problems – DistributedCandies and Maximum69Number
+	→ 📂 Pushed to: java-8-features-practice/leet-code-codebase
+
+	🧠 Solved one scenario-based problem-OceanFleet
+	→ 📂 Pushed to: collection-practice/scenario-based
+
+### 📅 8 Feb 2026 (Sunday)
+
+	📚 Created a new branch solution-designing-practice and completed one problem on Design Patterns-library management system
+	→ 📂 Pushed to: solution-designing-practice/gcr-codebase
+
+	📚 Created a new branch multithreading-practice and completed one problems on Multithreading
+	→ 📂 Pushed to: multithreading-practice/gcr-codebase
