@@ -25,8 +25,11 @@ public class AddressProblem {
 			System.out.println("9. View Persons by State");  
 			System.out.println("10. Count Persons by City");
 			System.out.println("11. Count Persons by State");  
-			System.out.println("12. Sort Contacts by Name");   
-			System.out.println("13. Exit");
+			System.out.println("12. Sort Contacts by Name");
+			System.out.println("13. Sort Contacts by City");
+			System.out.println("14. Sort Contacts by State");
+			System.out.println("15. Sort Contacts by Zip");   
+			System.out.println("16. Exit");
 			
 			System.out.print("\nEnter your choice: ");
 			int choice = sc.nextInt();
@@ -162,7 +165,28 @@ public class AddressProblem {
 					}
 					break;
 
-				case 13 :
+				case 13:
+					contact = getAddressBook();
+					if(contact != null) {
+						contact.sortByCity();
+					}
+					break;
+
+				case 14:
+					contact = getAddressBook();
+					if(contact != null) {
+						contact.sortByState();
+					}
+					break;
+
+				case 15:
+					contact = getAddressBook();
+					if(contact != null) {
+						contact.sortByZip();
+					}
+					break;
+
+				case 16 :
 					System.out.println("Exited");
 					System.exit(0);
 					

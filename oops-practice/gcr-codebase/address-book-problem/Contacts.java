@@ -111,18 +111,36 @@ public class Contacts {
 
 	// UC-11: Sorting contacts by name 
 	public void sortByName() {
-    Collections.sort(contacts, new Comparator<CreateContact>() {
-        @Override
-        public int compare(CreateContact c1, CreateContact c2) {
-            return c1.getFirstName().compareToIgnoreCase(c2.getFirstName());
-        }
-    });
+		Collections.sort(contacts, new Comparator<CreateContact>() {
+			@Override
+			public int compare(CreateContact c1, CreateContact c2) {
+				return c1.getFirstName().compareToIgnoreCase(c2.getFirstName());
+			}
+		});
 
-    System.out.println("\nContacts Sorted by First Name:\n");
-    for(CreateContact c : contacts) {
-        System.out.println(c);  
-    }
-}
+		System.out.println("\nContacts Sorted by First Name:\n");
+		for(CreateContact c : contacts) {
+			System.out.println(c);  
+		}
+	}
 
+	// UC-12: Sorting by category
+	public void sortByCity() {
+		contacts.sort(Comparator.comparing(CreateContact::getCity, String.CASE_INSENSITIVE_ORDER));
+		System.out.println("\nContacts Sorted by City:\n");
+		contacts.forEach(System.out::println);
+	}
+
+	public void sortByState() {
+		contacts.sort(Comparator.comparing(CreateContact::getState, String.CASE_INSENSITIVE_ORDER));
+		System.out.println("\nContacts Sorted by State:\n");
+		contacts.forEach(System.out::println);
+	}
+
+	public void sortByZip() {
+		contacts.sort(Comparator.comparingInt(CreateContact::getZip));
+		System.out.println("\nContacts Sorted by Zip:\n");
+		contacts.forEach(System.out::println);
+	}
 
 }
