@@ -4,6 +4,12 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.*;
+import java.net.HttpURLConnection;
+import java.net.URL;
+import java.io.OutputStream;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
+
 
 public class Contacts {
 	private ArrayList<CreateContact> contacts;
@@ -197,6 +203,224 @@ public class Contacts {
 
 		} catch(IOException e) {
 			System.out.println("Error reading file: " + e.getMessage());
+		}
+	}
+
+	public void writeToCSV(String fileName) {
+		try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+
+			// Header
+			writer.write("FirstName,LastName,Address,City,State,Zip,Phone,Email");
+			writer.newLine();
+
+			for(CreateContact c : contacts) {
+				writer.write(c.getFirstName() + "," +
+							c.getLastName() + "," +
+							c.getAddress() + "," +
+							c.getCity() + "," +
+							c.getState() + "," +
+							c.getZip() + "," +
+							c.getPhoneNumber() + "," +
+							c.getEmail());
+				writer.newLine();
+			}
+
+			System.out.println("Contacts saved as CSV successfully.");
+
+		} catch(IOException e) {
+			System.out.println("Error writing CSV: " + e.getMessage());
+		}
+	}
+
+	public void readFromCSV(String fileName) {
+		try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+
+			String line;
+			reader.readLine(); // Skip header
+
+			while((line = reader.readLine()) != null) {
+
+				String[] data = line.split(",");
+
+				CreateContact contact = new CreateContact(
+						data[0],
+						data[1],
+						data[2],
+						data[3],
+						data[4],
+						Integer.parseInt(data[5]),
+						Long.parseLong(data[6]),
+						data[7]
+				);
+
+				contacts.add(contact);
+			}
+
+			System.out.println("Contacts loaded from CSV successfully.");
+
+		} catch(IOException e) {
+			System.out.println("Error reading CSV: " + e.getMessage());
+		}
+	}
+
+	public void writeToJSON(String fileName) {
+		try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+
+			writer.write("[");
+			writer.newLine();
+
+			for(int i = 0; i < contacts.size(); i++) {
+				CreateContact c = contacts.get(i);
+
+				writer.write("  {");
+				writer.newLine();
+				writer.write("    \"firstName\": \"" + c.getFirstName() + "\",");
+				writer.newLine();
+				writer.write("    \"lastName\": \"" + c.getLastName() + "\",");
+				writer.newLine();
+				writer.write("    \"address\": \"" + c.getAddress() + "\",");
+				writer.newLine();
+				writer.write("    \"city\": \"" + c.getCity() + "\",");
+				writer.newLine();
+				writer.write("    \"state\": \"" + c.getState() + "\",");
+				writer.newLine();
+				writer.write("    \"zip\": " + c.getZip() + ",");
+				writer.newLine();
+				writer.write("    \"phoneNumber\": " + c.getPhoneNumber() + ",");
+				writer.newLine();
+				writer.write("    \"email\": \"" + c.getEmail() + "\"");
+				writer.newLine();
+				writer.write("  }");
+
+				if(i < contacts.size() - 1) {
+					writer.write(",");
+				}
+				writer.newLine();
+			}
+
+			writer.write("]");
+			writer.newLine();
+
+			System.out.println("Contacts saved as JSON successfully.");
+
+		} catch(IOException e) {
+			System.out.println("Error writing JSON: " + e.getMessage());
+		}
+	}
+
+	public void readFromJSON(String fileName) {
+		try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+
+			String line;
+			String firstName = "", lastName = "", address = "", city = "", state = "", email = "";
+			int zip = 0;
+			long phoneNumber = 0;
+
+			while((line = reader.readLine()) != null) {
+
+				line = line.trim();
+
+				if(line.startsWith("\"firstName\"")) {
+					firstName = line.split(":")[1].replace("\"", "").replace(",", "").trim();
+				}
+				else if(line.startsWith("\"lastName\"")) {
+					lastName = line.split(":")[1].replace("\"", "").replace(",", "").trim();
+				}
+				else if(line.startsWith("\"address\"")) {
+					address = line.split(":")[1].replace("\"", "").replace(",", "").trim();
+				}
+				else if(line.startsWith("\"city\"")) {
+					city = line.split(":")[1].replace("\"", "").replace(",", "").trim();
+				}
+				else if(line.startsWith("\"state\"")) {
+					state = line.split(":")[1].replace("\"", "").replace(",", "").trim();
+				}
+				else if(line.startsWith("\"zip\"")) {
+					zip = Integer.parseInt(line.split(":")[1].replace(",", "").trim());
+				}
+				else if(line.startsWith("\"phoneNumber\"")) {
+					phoneNumber = Long.parseLong(line.split(":")[1].replace(",", "").trim());
+				}
+				else if(line.startsWith("\"email\"")) {
+					email = line.split(":")[1].replace("\"", "").trim();
+
+					// Once email is read → object is complete
+					CreateContact contact = new CreateContact(
+							firstName, lastName, address, city, state, zip, phoneNumber, email
+					);
+
+					contacts.add(contact);
+				}
+			}
+
+			System.out.println("Contacts loaded from JSON successfully.");
+
+		} catch(IOException e) {
+			System.out.println("Error reading JSON: " + e.getMessage());
+		}
+	}
+
+	public void sendContactToServer(CreateContact c) {
+		try {
+			URL url = new URL("http://localhost:3000/contacts");
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
+			conn.setRequestMethod("POST");
+			conn.setRequestProperty("Content-Type", "application/json");
+			conn.setDoOutput(true);
+
+			String jsonInput = "{"
+					+ "\"firstName\":\"" + c.getFirstName() + "\","
+					+ "\"lastName\":\"" + c.getLastName() + "\","
+					+ "\"address\":\"" + c.getAddress() + "\","
+					+ "\"city\":\"" + c.getCity() + "\","
+					+ "\"state\":\"" + c.getState() + "\","
+					+ "\"zip\":" + c.getZip() + ","
+					+ "\"phoneNumber\":" + c.getPhoneNumber() + ","
+					+ "\"email\":\"" + c.getEmail() + "\""
+					+ "}";
+
+			OutputStream os = conn.getOutputStream();
+			os.write(jsonInput.getBytes());
+			os.flush();
+			os.close();
+
+			int responseCode = conn.getResponseCode();
+			System.out.println("POST Response Code: " + responseCode);
+
+			conn.disconnect();
+
+		} catch (Exception e) {
+			System.out.println("Error sending data: " + e.getMessage());
+		}
+	}
+
+	public void fetchContactsFromServer() {
+		try {
+			URL url = new URL("http://localhost:3000/contacts");
+			HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+
+			conn.setRequestMethod("GET");
+
+			BufferedReader reader = new BufferedReader(
+					new InputStreamReader(conn.getInputStream())
+			);
+
+			String line;
+			StringBuilder response = new StringBuilder();
+
+			while((line = reader.readLine()) != null) {
+				response.append(line);
+			}
+
+			reader.close();
+			conn.disconnect();
+
+			System.out.println("Server Response:");
+			System.out.println(response.toString());
+
+		} catch (Exception e) {
+			System.out.println("Error fetching data: " + e.getMessage());
 		}
 	}
 

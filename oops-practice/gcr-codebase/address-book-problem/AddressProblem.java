@@ -1,8 +1,11 @@
 import java.util.*;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class AddressProblem {
 
 	static Scanner sc = new Scanner(System.in);
+	static ExecutorService executor = Executors.newFixedThreadPool(3);
 	static Map<String, Contacts> addressBooks = new HashMap<>();
 
 	// UC-9: Maintain dictionaries for City → Persons and State → Persons
@@ -21,17 +24,23 @@ public class AddressProblem {
 			System.out.println("4. Edit Contact");
 			System.out.println("5. Delete Contact");
 			System.out.println("6. Search Contact by City or State");
-			System.out.println("8. View Persons by City"); 
-			System.out.println("9. View Persons by State");  
-			System.out.println("10. Count Persons by City");
-			System.out.println("11. Count Persons by State");  
-			System.out.println("12. Sort Contacts by Name");
-			System.out.println("13. Sort Contacts by City");
-			System.out.println("14. Sort Contacts by State");
-			System.out.println("15. Sort Contacts by Zip");   
-			System.out.println("16. Save Address Book to File");
-			System.out.println("17. Load Address Book from File");
-			System.out.println("18. Exit");
+			System.out.println("7. View Persons by City"); 
+			System.out.println("8. View Persons by State");  
+			System.out.println("9. Count Persons by City");
+			System.out.println("10. Count Persons by State");  
+			System.out.println("11. Sort Contacts by Name");
+			System.out.println("12. Sort Contacts by City");
+			System.out.println("13. Sort Contacts by State");
+			System.out.println("14. Sort Contacts by Zip");   
+			System.out.println("15. Save Address Book to File");
+			System.out.println("16. Load Address Book from File");
+			System.out.println("17. Save Address Book to CSV");
+			System.out.println("18. Load Address Book from CSV");
+			System.out.println("19. Save Address Book to JSON");
+			System.out.println("20. Load Address Book from JSON");
+			System.out.println("21. Send Contact to JSON Server");
+			System.out.println("22. Fetch Contacts from JSON Server");
+			System.out.println("23. Exit");
 			
 			System.out.print("\nEnter your choice: ");
 			int choice = sc.nextInt();
@@ -141,54 +150,54 @@ public class AddressProblem {
                     break;
 
 				// UC-9: View Persons by City
-				case 8:
+				case 7:
 					viewPersonsByCity();
 					break;
 				
 				// UC-9: View Persons by State
-				case 9:
+				case 8:
 					viewPersonsByState();
 					break;
 
 				// UC-10: Count Persons by City
-				case 10:
+				case 9:
 					countByCity();
 					break;
 
 				// UC-10: Count Persons by State
-				case 11:
+				case 10:
 					countByState();
 					break;
 
-				case 12:
+				case 11:
 					contact = getAddressBook();
 					if(contact != null) {
 						contact.sortByName();
 					}
 					break;
 
-				case 13:
+				case 12:
 					contact = getAddressBook();
 					if(contact != null) {
 						contact.sortByCity();
 					}
 					break;
 
-				case 14:
+				case 13:
 					contact = getAddressBook();
 					if(contact != null) {
 						contact.sortByState();
 					}
 					break;
 
-				case 15:
+				case 14:
 					contact = getAddressBook();
 					if(contact != null) {
 						contact.sortByZip();
 					}
 					break;
 
-				case 16:
+				case 15:
 					contact = getAddressBook();
 					if(contact != null) {
 						System.out.print("Enter file name (example: contacts.txt): ");
@@ -197,7 +206,7 @@ public class AddressProblem {
 					}
 					break;
 
-				case 17:
+				case 16:
 					contact = getAddressBook();
 					if(contact != null) {
 						System.out.print("Enter file name to read: ");
@@ -206,9 +215,77 @@ public class AddressProblem {
 					}
 					break;
 
-				case 18 :
+				case 17:
+					contact = getAddressBook();
+					if(contact != null) {
+						System.out.print("Enter CSV file name (example: contacts.csv): ");
+						String fileName = sc.nextLine();
+						executor.submit(() -> {
+							contact.writeToCSV(fileName);
+						});
+
+					}
+					break;
+
+				case 18:
+					contact = getAddressBook();
+					if(contact != null) {
+						System.out.print("Enter CSV file name to read: ");
+						String fileName = sc.nextLine();
+						contact.readFromCSV(fileName);
+					}
+					break;
+
+				case 19:
+					contact = getAddressBook();
+					if(contact != null) {
+						System.out.print("Enter JSON file name (example: contacts.json): ");
+						String fileName = sc.nextLine();
+						executor.submit(() -> {
+							contact.writeToJSON(fileName);
+						});
+
+					}
+					break;
+
+				case 20:
+					contact = getAddressBook();
+					if(contact != null) {
+						System.out.print("Enter JSON file name to read: ");
+						String fileName = sc.nextLine();
+						contact.readFromJSON(fileName);
+					}
+					break;
+
+				case 21:
+					contact = getAddressBook();
+					if(contact != null) {
+						System.out.print("Enter First Name to send: ");
+						String fname = sc.nextLine();
+
+						for(CreateContact c : contact.getAllContacts()) {
+							if(c.getFirstName().equalsIgnoreCase(fname)) {
+								executor.submit(() -> {
+									contact.sendContactToServer(c);
+								});
+								break;
+							}
+						}
+					}
+					break;
+
+				case 22:
+					contact = getAddressBook();
+					if(contact != null) {
+						contact.fetchContactsFromServer();
+					}
+					break;
+
+				case 23:
+					executor.shutdown();
 					System.out.println("Exited");
 					System.exit(0);
+
 					
 				default :
 					System.out.println("Enter the valid choice");
