@@ -1,3 +1,8 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.*;
 
 public class Contacts {
@@ -141,6 +146,58 @@ public class Contacts {
 		contacts.sort(Comparator.comparingInt(CreateContact::getZip));
 		System.out.println("\nContacts Sorted by Zip:\n");
 		contacts.forEach(System.out::println);
+	}
+
+	// UC-13
+	public void writeToFile(String fileName) {
+		try (BufferedWriter writer = new BufferedWriter(new FileWriter(fileName))) {
+
+			for(CreateContact c : contacts) {
+				writer.write(c.getFirstName() + "," +
+							c.getLastName() + "," +
+							c.getAddress() + "," +
+							c.getCity() + "," +
+							c.getState() + "," +
+							c.getZip() + "," +
+							c.getPhoneNumber() + "," +
+							c.getEmail());
+				writer.newLine();
+			}
+
+			System.out.println("Contacts saved successfully to file.");
+
+		} catch(IOException e) {
+			System.out.println("Error writing file: " + e.getMessage());
+		}
+	}
+
+	public void readFromFile(String fileName) {
+		try (BufferedReader reader = new BufferedReader(new FileReader(fileName))) {
+
+			String line;
+
+			while((line = reader.readLine()) != null) {
+				String[] data = line.split(",");
+
+				CreateContact contact = new CreateContact(
+						data[0],
+						data[1],
+						data[2],
+						data[3],
+						data[4],
+						Integer.parseInt(data[5]),
+						Long.parseLong(data[6]),
+						data[7]
+				);
+
+				contacts.add(contact);
+			}
+
+			System.out.println("Contacts loaded successfully from file.");
+
+		} catch(IOException e) {
+			System.out.println("Error reading file: " + e.getMessage());
+		}
 	}
 
 }

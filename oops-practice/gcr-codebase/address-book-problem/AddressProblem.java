@@ -29,7 +29,9 @@ public class AddressProblem {
 			System.out.println("13. Sort Contacts by City");
 			System.out.println("14. Sort Contacts by State");
 			System.out.println("15. Sort Contacts by Zip");   
-			System.out.println("16. Exit");
+			System.out.println("16. Save Address Book to File");
+			System.out.println("17. Load Address Book from File");
+			System.out.println("18. Exit");
 			
 			System.out.print("\nEnter your choice: ");
 			int choice = sc.nextInt();
@@ -186,7 +188,25 @@ public class AddressProblem {
 					}
 					break;
 
-				case 16 :
+				case 16:
+					contact = getAddressBook();
+					if(contact != null) {
+						System.out.print("Enter file name (example: contacts.txt): ");
+						String fileName = sc.nextLine();
+						contact.writeToFile(fileName);
+					}
+					break;
+
+				case 17:
+					contact = getAddressBook();
+					if(contact != null) {
+						System.out.print("Enter file name to read: ");
+						String fileName = sc.nextLine();
+						contact.readFromFile(fileName);
+					}
+					break;
+
+				case 18 :
 					System.out.println("Exited");
 					System.exit(0);
 					
