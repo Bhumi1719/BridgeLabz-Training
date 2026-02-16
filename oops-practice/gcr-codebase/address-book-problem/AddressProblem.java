@@ -25,7 +25,8 @@ public class AddressProblem {
 			System.out.println("9. View Persons by State");  
 			System.out.println("10. Count Persons by City");
 			System.out.println("11. Count Persons by State");  
-			System.out.println("12. Exit");
+			System.out.println("12. Sort Contacts by Name");   
+			System.out.println("13. Exit");
 			
 			System.out.print("\nEnter your choice: ");
 			int choice = sc.nextInt();
@@ -154,7 +155,14 @@ public class AddressProblem {
 					countByState();
 					break;
 
-				case 12 :
+				case 12:
+					contact = getAddressBook();
+					if(contact != null) {
+						contact.sortByName();
+					}
+					break;
+
+				case 13 :
 					System.out.println("Exited");
 					System.exit(0);
 					

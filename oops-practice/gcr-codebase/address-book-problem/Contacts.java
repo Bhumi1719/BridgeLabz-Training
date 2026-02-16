@@ -109,4 +109,20 @@ public class Contacts {
 		return new ArrayList<>(contacts); 
 	}
 
+	// UC-11: Sorting contacts by name 
+	public void sortByName() {
+    Collections.sort(contacts, new Comparator<CreateContact>() {
+        @Override
+        public int compare(CreateContact c1, CreateContact c2) {
+            return c1.getFirstName().compareToIgnoreCase(c2.getFirstName());
+        }
+    });
+
+    System.out.println("\nContacts Sorted by First Name:\n");
+    for(CreateContact c : contacts) {
+        System.out.println(c);  
+    }
+}
+
+
 }
