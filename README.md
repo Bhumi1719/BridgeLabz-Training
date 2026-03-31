@@ -632,5 +632,76 @@ BridgeLabz-Training/
 	📚 Created a new branch solution-designing-practice and completed one problem on Design Patterns-library management system
 	→ 📂 Pushed to: solution-designing-practice/gcr-codebase
 
+	📚 Created a new branch multithreading-practice and completed one problem on Multithreading
+	→ 📂 Pushed to: multithreading-practice/gcr-codebase
+
+### 📅 9 Feb 2026 (Monday)
+
+	📚 Implemented SonarCube Technique
+	→ 📂 Pushed to: collection-practice/gcr-codebase
+
+	🧠 Solved four multithreading problems
+	→ 📂 Pushed to: multithreading-practice/gcr-codebase
+
+	🧠 Solved four scenario-based problems
+	→ 📂 Pushed to: collection-practice/scenario-based
+
+	🧩 Solved 2 LeetCode problems – BuddyStrings and GoatLatin
+	→ 📂 Pushed to: multithreading-practice/leet-code-codebase
+
+### 📅 10 Feb 2026 (Tuesday)
+
+	📚 Created a new branch solution-designing-practice and completed one problem on Design Patterns-library management system
+	→ 📂 Pushed to: solution-designing-practice/gcr-codebase
+
 	📚 Created a new branch multithreading-practice and completed one problems on Multithreading
 	→ 📂 Pushed to: multithreading-practice/gcr-codebase
+
+### 📅 11 Feb 2026 (Wednesday)
+
+	📚 Created a new branch dbms-practice and solved one problem-Health clininc App
+	→ 📂 Pushed to: dbms-practice/gcr-codebase
+
+### 📅 12 Feb 2026 (Thursday)
+
+	🧩 Solved 2 LeetCode problems – LongPressedName and ReverseOnlyLetters
+	→ 📂 Pushed to: dbms-practice/leet-code-codebase
+
+### 📅 16 Feb 2026 (Monday)
+
+	🧠 Solved one scenario-based problem-EmployeeWage
+	→ 📂 Pushed to: java-8-features-practice/scenario-based
+
+	📚 Solved the remaining use cases of address book problem
+	→ 📂 Pushed to: oops-practice/gcr-codebase
+
+### 📅 17 Feb 2026 (Tuesday)
+
+	🧠 Solved four scenario-based problems
+	→ 📂 Pushed to: collection-practice/scenario-based
+
+### 📅 19 Feb 2026 (Thursday)
+
+	🧠 Solved six scenario-based problems
+	→ 📂 Pushed to: collection-practice/scenario-based
+
+	🧩 Solved 2 LeetCode problems – EditDistance and LargestNumber
+	→ 📂 Pushed to: java-8-features-practice/leet-code-codebase
+
+### 📅 20 Feb 2026 (Friday)
+
+	🧩 Solved 2 LeetCode problems – TeemoAttack and BaseballGame
+	→ 📂 Pushed to: java-8-features-practice/leet-code-codebase
+
+### 📅 21 Feb 2026 (Saturday)
+
+	🧠 Solved one scenario-based problem-SmartTrackingfineCollectionSystem
+	→ 📂 Pushed to: collection-practice/scenario-based
+
+### 📅 23 Feb 2026 (Monday)
+
+	🧩 Solved 2 LeetCode problems – UniqueMorseCodeWords and FairCandySwap
+	→ 📂 Pushed to: java-8-features-practice/leet-code-codebase
+
+	🧠 Solved one streams problem on the review day
+	→ 📂 Pushed to: reviews
